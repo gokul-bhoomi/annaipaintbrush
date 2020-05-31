@@ -27,6 +27,32 @@
 .App-link {
   color: #61dafb;
 }
+.nav li {
+  display: inline;
+  color: white;
+}
+.nav {
+  right: 2em;
+  top: 0em;
+  position: absolute;
+  display: 'inline-block';
+}
+.logo {
+  width: 12em;
+}
+
+@media only screen and (max-width: 482px) {
+  .logo {
+    width: 8em;
+    vertical-align: middle;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+}
 
 @keyframes App-logo-spin {
   from {
