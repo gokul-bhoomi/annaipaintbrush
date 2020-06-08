@@ -5,10 +5,10 @@ const Navbar = (props) => {
   return (
     <Fragment>
       <nav>
-        <div className='nav-wrapper red accent-3'>
+        <div className='nav-wrapper red accent-3' style={{ zIndex: '10' }}>
           <Link to='#!' className='brand-logo'>
             <img
-              src={require('../media/annai_logo.png')}
+              src={require('../../media/annai_logo.png')}
               alt='logo'
               className='logo'
             />

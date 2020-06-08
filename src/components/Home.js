@@ -1,7 +1,12 @@
 import React from 'react';
+import Slideshow from './layouts/SlideShow';
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Slideshow />
+    </div>
+  );
 };
 
 export default Home;

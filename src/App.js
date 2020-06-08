@@ -4,8 +4,9 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Navbar from './components/layouts/Navbar';
+import Home from './components/Home.js';
+import Footer from './components/layouts/Footer';
 
 const App = () => {
   useEffect(() => {
@@ -13,10 +14,9 @@ const App = () => {
   });
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Home />
-      </div>
+      <Navbar />
+      <Home />
+      <Footer />
     </Router>
   );
 };
