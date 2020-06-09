@@ -5,7 +5,7 @@ const Navbar = (props) => {
   return (
     <Fragment>
       <nav>
-        <div className='nav-wrapper red accent-3' style={{ zIndex: '10' }}>
+        <div className='nav-wrapper deep-orange' style={{ zIndex: '10' }}>
           <Link to='#!' className='brand-logo'>
             <img
               src={require('../../media/annai_logo.png')}

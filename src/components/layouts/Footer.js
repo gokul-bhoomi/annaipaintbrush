@@ -5,7 +5,7 @@ const Footer = () => {
     <footer
       class='page-footer red accent-2 '
       style={{
-        position: 'absolute',
+        position: 'relative',
         bottom: '0',
         width: '100%',
         paddingTop: '0',

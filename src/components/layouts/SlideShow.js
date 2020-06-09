@@ -6,7 +6,7 @@ const fadeProperties = {
   transitionDuration: 500,
   infinite: true,
   indicators: false,
-  pauseOnHover: true,
+  pauseOnHover: false,
 };
 
 const Slideshow = () => {
@@ -30,7 +30,7 @@ const Slideshow = () => {
           </div>
           <div className='each-fade'>
             <div className='image-container'>
-              <img src={require('../../media/slides/2.jpg')} alt='annai' />
+              <img src={require('../../media/slides/3.jpg')} alt='annai' />
             </div>
           </div>
         </Fade>
