@@ -13,7 +13,7 @@ const Navbar = (props) => {
               className='logo'
             />
           </Link>
-          <a href='#!' data-target='mobile-demo' class='sidenav-trigger'>
+          <a href='#!' data-target='mobile-demo' className='sidenav-trigger'>
             <i class='material-icons' style={{ marginLeft: '1em' }}>
               menu
             </i>

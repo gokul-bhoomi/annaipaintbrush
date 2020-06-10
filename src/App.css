@@ -114,6 +114,25 @@ h3 {
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #ff3d00;
+  margin-top: 5em;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10em;
+}
+
+.testimonial {
+  margin-top: 8em;
+  background-color: #f44336;
+  color: white
+}
+
+.sidenav-overlay {
+  opacity: 0 !important;
 }
 
 /* width */

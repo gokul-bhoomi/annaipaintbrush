@@ -5,12 +5,14 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/layouts/Navbar';
-import Home from './components/Home.js';
+import Home from './components/pages/home/Home.js';
 import Footer from './components/layouts/Footer';
 
 const App = () => {
   useEffect(() => {
     M.AutoInit();
+
+
   });
   return (
     <Router>
