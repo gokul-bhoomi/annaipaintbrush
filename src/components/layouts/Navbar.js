@@ -6,13 +6,14 @@ const Navbar = (props) => {
     <Fragment>
       <nav>
         <div className='nav-wrapper deep-orange' style={{ zIndex: '10' }}>
-          <Link to='#!' className='brand-logo'>
+          <a href='/' className='brand-logo'>
             <img
               src={require('../../media/annai_logo.png')}
               alt='logo'
               className='logo'
+
             />
-          </Link>
+          </a>
           <a href='#!' data-target='mobile-demo' className='sidenav-trigger'>
             <i class='material-icons' style={{ marginLeft: '1em' }}>
               menu
@@ -21,43 +22,40 @@ const Navbar = (props) => {
           <ul className='right hide-on-med-and-down '>
             <b>
               <li>
-                <Link to='home'>Home</Link>
+                <a href='/'>Home</a>
+              </li>
+
+              <li>
+                <Link to='/ourproducts'>Our Products</Link>
               </li>
               <li>
-                <Link to='badges.html'>About Us</Link>
+                <a className=" modal-trigger" href="#modal1">Enquiry</a>
               </li>
               <li>
-                <Link to='collapsible.html'>Products</Link>
-              </li>
-              <li>
-                <Link to='mobile.html'>Place Order</Link>
-              </li>
-              <li>
-                <Link to='mobile.html'>Contact Us</Link>
+                <Link to='contactus'>Contact Us</Link>
               </li>
             </b>
           </ul>
-          <ul class='sidenav' id='mobile-demo'>
-            <b>
-              <li>
-                <Link to='home'>Home</Link>
-              </li>
-              <li>
-                <Link to='badges.html'>About Us</Link>
-              </li>
-              <li>
-                <Link to='collapsible.html'>Products</Link>
-              </li>
-              <li>
-                <Link to='mobile.html'>Place Order</Link>
-              </li>
-              <li>
-                <Link to='mobile.html'>Contact Us</Link>
-              </li>
-            </b>
-          </ul>
+
         </div>
       </nav>
+      <ul class='sidenav sidenav-close' id='mobile-demo'>
+        <b>
+          <li>
+            <a href='/'>Home</a>
+          </li>
+
+          <li>
+            <Link to='/ourproducts'>Products</Link>
+          </li>
+          <li>
+            <a className=" modal-trigger" href="#modal1">Enquiry</a>
+          </li>
+          <li>
+            <Link to='/contactus'>Contact Us</Link>
+          </li>
+        </b>
+      </ul>
     </Fragment>
   );
 };

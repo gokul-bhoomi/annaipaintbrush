@@ -108,6 +108,75 @@ h3 {
   position: relative;
 }
 
+.modal {
+  border-radius: 40px !important;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10em;
+}
+
+.side {
+  position: fixed;
+  top: 60%;
+  right: 0;
+  z-index: 200;
+  opacity: 1;
+}
+
+.product {
+  margin-top: 2em !important;
+  margin-right: 3em !important;
+  margin-left: 5em !important;
+  transition: transform .2s;
+}
+
+.product:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.banner {
+  background-color: #ef6c00;
+  border-radius: 50px;
+  margin-top: 5em;
+  max-width: 50%;
+  margin: auto;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+}
+
+.banner h3 {
+  color: white;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.animated {
+  margin-bottom: 60px;
+  -webkit-animation-duration: 5s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: rotateInDownLeft;
+}
+
+@keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: row;
@@ -117,7 +186,7 @@ h3 {
   margin-top: 5em;
 }
 
-.cards {
+.s {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -133,6 +202,27 @@ h3 {
 
 .sidenav-overlay {
   opacity: 0 !important;
+}
+
+.contact {
+  display: flex;
+  margin-top: 5em;
+  margin-left: 5em;
+}
+
+.contact img {
+  width: 25px;
+}
+
+.contact p {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+.for {
+  width: '0' !important
 }
 
 /* width */
@@ -153,6 +243,99 @@ h3 {
 ::-webkit-scrollbar-thumb {
   background: #88ff00;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 475px) {
+  .phone {
+    width: 248px !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .modal {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .product {
+    margin-right: 1em !important;
+    margin-left: 5em !important;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .product {
+    margin-right: 2em !important;
+    margin-left: 4em !important;
+  }
+}
+
+@media screen and (max-width: 1107px) {
+  .product {
+    margin-right: 1em !important;
+    margin-left: 4em !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .product {
+    margin-right: 0em !important;
+    margin-left: 8em !important;
+  }
+  .row .col.m12 {
+    width: 70% !important
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .product {
+    margin-right: 0em !important;
+    margin-left: 6em !important;
+  }
+  .row .col.m12 {
+    width: 70% !important
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .product {
+    margin-right: 0em !important;
+    margin-left: 5em !important;
+  }
+  .row .col.m12 {
+    width: 70% !important
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    margin-right: 0em !important;
+    margin-left: 4em !important;
+  }
+  .row .col.m12 {
+    width: 70% !important
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .phone1 {
+    width: 248px !important;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .contact p {
+    font-size: 1.2em;
+    margin-left: 1em;
+  }
 }
 
 @media only screen and (max-width: 482px) {

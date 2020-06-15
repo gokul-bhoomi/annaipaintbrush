@@ -12,6 +12,7 @@ const Footer = () => {
       }}
     >
       <div class='footer-copyright ' style={{ minHeight: '0px', padding: '0' }}>
+
         <div
           class='container '
           style={{ textAlign: 'center', display: 'inline' }}
