@@ -225,6 +225,14 @@ h3 {
   height: fit-content!important
 }
 
+.fit {
+  width: fit-content !important
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;

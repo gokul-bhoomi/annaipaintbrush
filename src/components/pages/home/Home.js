@@ -67,7 +67,7 @@ const Home = () => {
         <div className="parallax"><img src={image} alt="brush" /></div>
       </div>
       <Testimonial />
-      <Link to='/ourproducts'><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Our Products</button></Link>
+      <a href="#top"><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Use Navigation on top left corner</button></a>
     </Fragment>
 
 

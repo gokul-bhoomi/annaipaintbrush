@@ -1,5 +1,5 @@
 import {
-  SET_CURRENT
+  SET_CURRENT, SET_CHOICE
 } from '../types';
 
 export default (state, action) => {
@@ -12,7 +12,11 @@ export default (state, action) => {
         ...state,
         current: action.payload,
       };
-
+    case SET_CHOICE:
+      return {
+        ...state,
+        choice: action.payload
+      };
 
     default:
       return state;

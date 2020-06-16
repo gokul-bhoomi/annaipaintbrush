@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ProductItem from './ProductItem';
 import M from 'materialize-css/dist/js/materialize.min.js';
-import Select from 'react-select';
+import productContext from '../../../context/product/productContext';
 
 
 const Products = () => {
@@ -11,18 +11,14 @@ const Products = () => {
         M.AutoInit();
 
     }, []);
-    const options = [
-        { value: '1', label: 'Paint Brushes' },
-        { value: '2', label: 'Art Brushes' },
-        { value: '3', label: 'Paint Rollers' },
-        { value: '4', label: 'Putty Knives' },
-    ];
+
+
     const arr1 = ["ANNAI PREMIUM MILK WHITE 4 INCH", "TAPPER DOUBLE 4 INCH", "ANNAI TOUCH WOOD 1 INCH", "ANNAI TOUCH WOOD 1.5 INCH", "ANNAI TOUCH WOOD 2 INCH", "ANNAI TOUCH WOOD 2.5 INCH", "ANNAI TOUCH WOOD 3 INCH", "TAPPER 0.5 INCH", "TAPPER 1 INCH", "TAPPER 1.5 INCH", "TAPPER 2 INCH", "TAPPER 2.5 INCH", "TAPPER 3 INCH", "TAPPER 2 INCH ( DOUBLE BERTH )", "TAPPER 3 INCH ( DOUBLE BERTH )", "HOLLOW SINGLE 4 INCH"];
     const arr2 = [];
     const arr3 = [];
     const arr4 = [];
 
-    const [choice, setchoice] = useState(1);
+    const { choice } = useContext(productContext);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(9);
     const pageNumbers = [];
@@ -61,10 +57,7 @@ const Products = () => {
         setCurrentPage(pageNumber);
 
     };
-    const handleChange = (choice) => {
-        setchoice(parseInt(choice.value));
 
-    };
 
     return (
         <Fragment>
@@ -75,15 +68,6 @@ const Products = () => {
             </div>
             <h6 style={{ textAlign: 'center', marginBottom: '2em', fontWeight: 'bold' }}>Call us for the Best Price</h6>
 
-            <Select
-                value={choice.value}
-                onChange={handleChange}
-                options={options}
-                className="container no "
-                isSearchable={false}
-                placeholder="Paint Brushes"
-
-            />
 
 
 
@@ -93,7 +77,7 @@ const Products = () => {
 
                     currentPosts.map((items) =>
 
-                        <ProductItem src={items} text={items} />
+                        <ProductItem src={items} key={items} text={items} />
 
                     )
 

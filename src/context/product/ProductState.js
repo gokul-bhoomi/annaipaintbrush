@@ -4,14 +4,16 @@ import productReducer from './productReducer';
 
 import {
 
-  SET_CURRENT
+  SET_CURRENT,
+  SET_CHOICE
 } from '../types';
 const ProductState = (props) => {
   const initialState = {
     current: {
       text: '',
       src: 'TAPPER 1.5 INCH',
-    }
+    },
+    choice: 1
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState);
@@ -22,6 +24,9 @@ const ProductState = (props) => {
   const setCurrent = (data) => {
     dispatch({ type: SET_CURRENT, payload: data });
   };
+  const setChoice = (n) => {
+    dispatch({ type: SET_CHOICE, payload: n });
+  };
 
 
   return (
@@ -29,8 +34,10 @@ const ProductState = (props) => {
       value={{
 
         current: state.current,
-
+        choice: state.choice,
         setCurrent,
+        setChoice
+
       }}
     >
       {props.children}
