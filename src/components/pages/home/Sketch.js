@@ -6,13 +6,13 @@ const Sketch = () => {
     const initialState = {
         text: '#fff',
         background: '#ff3d00',
-        value: 1
+        value: "1"
     };
     const [state, setstate] = useState(initialState);
 
     const onChange = (color) => {
 
-        if (state.value === 1)
+        if (state.value === "1")
             setstate({ ...state, background: color.hex });
         else
             setstate({ ...state, text: color.hex });

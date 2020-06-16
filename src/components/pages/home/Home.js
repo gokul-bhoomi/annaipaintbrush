@@ -10,6 +10,7 @@ import Cards from './Cards';
 import Testimonial from './Testimonial';
 
 const Home = () => {
+
   const sectionRef = useRef(null);
   const sectionReff = useRef(null);
   const intersection = useIntersection(sectionRef, {
@@ -50,11 +51,12 @@ const Home = () => {
 
   return (
     <Fragment>
+
       <Slideshow />
       <h4 style={{ textAlign: 'center', color: '#01579b', fontWeight: 'bold', margin: 0 }}>Welcome to Annai Paint Brush</h4>
       <p style={{ textAlign: 'center', color: '#01579b' }}>Magic With Colours</p>
-      <a className="btn side" href="">  <i className="material-icons">local_phone</i>
-      </a>
+      <Link className="btn side" to="/contactus">  <i className="material-icons">local_phone</i>
+      </Link>
       <div ref={sectionRef}>
         <Sketch />
       </div>
@@ -62,9 +64,9 @@ const Home = () => {
       <div ref={sectionReff}>
         <Cards />
       </div>
-      {image ? <div class="parallax-container" style={{ height: '300px' }}>
+      <div class="parallax-container" style={{ height: '300px' }}>
         <div class="parallax"><img src={image} alt="brush" /></div>
-      </div> : 'hiii'}
+      </div>
       <Testimonial />
       <Link to='/ourproducts'><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Our Products</button></Link>
     </Fragment>

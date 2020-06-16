@@ -10,7 +10,7 @@ const ProductState = (props) => {
   const initialState = {
     current: {
       text: '',
-      src: '1',
+      src: 'TOUCH WOOD 3 INCH',
     }
   };
 
