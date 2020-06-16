@@ -12,16 +12,16 @@ const ProductItem = ({ src, text }) => {
         setCurrent(data);
     };
     return (
-        <div class="col s12 m12 l3 product">
-            <div class="card">
+        <div className="col s12 m12 l3 product">
+            <div className="card">
                 <div className="card-image" onClick={onClick}>
-                    <img className="modal-trigger" href="#modal3" alt="brush" src={require(`../../../media/products/${src}.png`)} />
+                    <img className="modal-trigger" href="#modal3" alt="brush" src={require(`../../../media/products/${src}.jpg`)} />
 
                 </div>
 
-                <div class="card-action" style={{ textAlign: 'center' }}>
-                    <b><a class="waves-effect waves-light btn modal-trigger  light-green darken-3
-" href="#modal3" onClick={onClick}>{text}</a></b>
+                <div className="card-action" style={{ textAlign: 'center' }}>
+                    <b><a className="waves-effect waves-light btn modal-trigger  light-green darken-3
+" href="#modal3" onClick={onClick} >{text}</a></b>
                 </div>
             </div>
         </div>

@@ -17,14 +17,14 @@ const Products = () => {
         { value: '3', label: 'Paint Rollers' },
         { value: '4', label: 'Putty Knives' },
     ];
-    const arr1 = ["TOUCH WOOD 2 INCH"];
-    const arr2 = ["MILK WHITE 4 INCH", "MILK WHITE 4 INCH", "MILK WHITE 4 INCH", "MILK WHITE 4 INCH", "MILK WHITE 4 INCH"];
-    const arr3 = ["TOUCH WOOD 2 INCH", "TOUCH WOOD 3 INCH", "MILK WHITE 4 INCH", "MILK WHITE 4 INCH"];
-    const arr4 = ["TOUCH WOOD 2 INCH", "TOUCH WOOD 3 INCH", "MILK WHITE 4 INCH", "MILK WHITE 4 INCH"];
+    const arr1 = ["ANNAI PREMIUM MILK WHITE 4 INCH", "TAPPER DOUBLE 4 INCH", "ANNAI TOUCH WOOD 1 INCH", "ANNAI TOUCH WOOD 1.5 INCH", "ANNAI TOUCH WOOD 2 INCH", "ANNAI TOUCH WOOD 2.5 INCH", "ANNAI TOUCH WOOD 3 INCH", "TAPPER 0.5 INCH", "TAPPER 1 INCH", "TAPPER 1.5 INCH", "TAPPER 2 INCH", "TAPPER 2.5 INCH", "TAPPER 3 INCH", "TAPPER 2 INCH ( DOUBLE BERTH )", "TAPPER 3 INCH ( DOUBLE BERTH )", "HOLLOW SINGLE 4 INCH"];
+    const arr2 = [];
+    const arr3 = [];
+    const arr4 = [];
 
     const [choice, setchoice] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(1);
+    const [postsPerPage] = useState(9);
     const pageNumbers = [];
 
     let currentPosts = [];
@@ -68,20 +68,23 @@ const Products = () => {
 
     return (
         <Fragment>
-            <Link className="btn side" to="/contactus">  <i className="material-icons">local_phone</i> <span>Ask for the best price</span>
+            <Link className="btn side" to="/contactus">  <i className="material-icons">local_phone</i> <span>Call</span>
             </Link>
             <div className="banner animated">
                 <h3>Our Products</h3>
             </div>
+            <h6 style={{ textAlign: 'center', marginBottom: '2em', fontWeight: 'bold' }}>Call us for the Best Price</h6>
 
             <Select
-                value={choice}
+                value={choice.value}
                 onChange={handleChange}
                 options={options}
-                className="container"
+                className="container no "
                 isSearchable={false}
                 placeholder="Paint Brushes"
+
             />
+
 
 
 
@@ -111,8 +114,9 @@ const Products = () => {
                             <li key={number} className=''>
                                 <Link
                                     onClick={() => paginate(number)}
-                                    to='/ourproducts'
+                                    to='#top'
                                     className={currentPage === number ? 'active' : ''}
+
                                 >
                                     {number}
                                 </Link>
@@ -120,6 +124,14 @@ const Products = () => {
 
 
                         ))}
+                        {currentPage - 1 > 0 ?
+                            <li > <Link className='nostyle'
+                                onClick={() => paginate(currentPage - 1)}
+                                to='/ourproducts'
+
+                            >
+                                Back
+                        </Link></li> : ''}
                         {pageNumbers.length >= currentPage + 1 ?
                             <li > <Link className='nostyle'
                                 onClick={() => paginate(currentPage + 1)}

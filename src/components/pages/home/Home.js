@@ -27,7 +27,6 @@ const Home = () => {
   });
 
   const fadeIn = element => {
-    console.log("hi");
     gsap.to(element, 2, {
       opacity: 1,
       y: -60,
@@ -64,8 +63,8 @@ const Home = () => {
       <div ref={sectionReff}>
         <Cards />
       </div>
-      <div class="parallax-container" style={{ height: '300px' }}>
-        <div class="parallax"><img src={image} alt="brush" /></div>
+      <div className="parallax-container" style={{ height: '300px' }}>
+        <div className="parallax"><img src={image} alt="brush" /></div>
       </div>
       <Testimonial />
       <Link to='/ourproducts'><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Our Products</button></Link>

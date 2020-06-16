@@ -10,7 +10,7 @@ const ProductState = (props) => {
   const initialState = {
     current: {
       text: '',
-      src: 'TOUCH WOOD 3 INCH',
+      src: 'TAPPER 1.5 INCH',
     }
   };
 

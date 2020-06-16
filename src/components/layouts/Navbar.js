@@ -15,7 +15,7 @@ const Navbar = (props) => {
             />
           </a>
           <a href='#!' data-target='mobile-demo' className='sidenav-trigger'>
-            <i class='material-icons' style={{ marginLeft: '1em' }}>
+            <i className='material-icons' style={{ marginLeft: '1em' }}>
               menu
             </i>
           </a>
@@ -39,7 +39,7 @@ const Navbar = (props) => {
 
         </div>
       </nav>
-      <ul class='sidenav sidenav-close' id='mobile-demo'>
+      <ul className='sidenav sidenav-close' id='mobile-demo'>
         <b>
           <li>
             <a href='/'>Home</a>

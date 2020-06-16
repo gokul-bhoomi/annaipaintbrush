@@ -11,6 +11,7 @@ import ContactUs from './components/pages/ContactUs';
 import Modal from './components/layouts/Modal';
 import Products from './components/pages/products/Products';
 import Pmodal from './components/pages/products/Pmodal';
+import ScrollToTop from './components/layouts/ScrollToTop';
 
 import ProductState from './context/product/ProductState';
 
@@ -24,17 +25,20 @@ const App = () => {
   return (
     <ProductState>
       <Router>
-        <Navbar />
-        <Modal />
-        <Pmodal />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/ContactUs' component={ContactUs} />
-          <Route exact path='/ourproducts' component={Products} />
+        <ScrollToTop>
+          <Navbar />
+          <Modal />
+          <Pmodal />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/ContactUs' component={ContactUs} />
+            <Route exact path='/ourproducts' component={Products} />
 
-        </Switch>
-        <Footer />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </Router>
+
     </ProductState>
   );
 };
