@@ -10,7 +10,6 @@ import Cards from './Cards';
 import Testimonial from './Testimonial';
 
 const Home = () => {
-
   const sectionRef = useRef(null);
   const sectionReff = useRef(null);
   const intersection = useIntersection(sectionRef, {
@@ -68,7 +67,7 @@ const Home = () => {
       </div>
       <Testimonial />
 
-      <a href="#top"><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Use Navigation on the top left corner</button></a>
+      <a href="#top"><button className='btn onlymobile' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Use Navigation on the top left corner</button></a>
 
     </Fragment>
 

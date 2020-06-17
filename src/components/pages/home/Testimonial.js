@@ -55,7 +55,7 @@ const Testimonial = () => {
                             alt='roller'
                         /> <br />
                         <p style={{ textAlign: 'center', marginTop: '0' }}><b>Selva</b> (Painter)</p>
-                        <p style={{ textAlign: 'center', marginTop: '0' }}>"The finish we get while painting walls with Annai Brush is sliky smooth.Annai products gives a rich feel to the wall we paint."</p>
+                        <p style={{ textAlign: 'center', marginTop: '0' }}>"The finish we get while painting walls with Annai Brush is sliky smooth. Annai products gives a rich feel to the wall we paint."</p>
 
                     </div>
                 </Fade>

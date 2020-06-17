@@ -356,6 +356,16 @@ html {
   border-radius: 5px;
 }
 
+.onlymobile {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .onlymobile {
+    visibility: visible;
+  }
+}
+
 @media screen and (max-width: 475px) {
   .phone {
     width: 248px !important;

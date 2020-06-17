@@ -6,11 +6,15 @@ import productContext from '../../../context/product/productContext';
 
 
 const Products = () => {
+    const { choice } = useContext(productContext);
     useEffect(() => {
         M.toast({ html: "Click on the image to enlarge" });
         M.AutoInit();
 
     }, []);
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [choice]);
 
 
     const arr1 = ["ANNAI PREMIUM MILK WHITE 4 INCH", "TAPPER DOUBLE 4 INCH", "ANNAI TOUCH WOOD 1 INCH", "ANNAI TOUCH WOOD 1.5 INCH", "ANNAI TOUCH WOOD 2 INCH", "ANNAI TOUCH WOOD 2.5 INCH", "ANNAI TOUCH WOOD 3 INCH", "TAPPER 0.5 INCH", "TAPPER 1 INCH", "TAPPER 1.5 INCH", "TAPPER 2 INCH", "TAPPER 2.5 INCH", "TAPPER 3 INCH", "TAPPER 2 INCH ( DOUBLE BERTH )", "TAPPER 3 INCH ( DOUBLE BERTH )", "HOLLOW SINGLE 4 INCH"];
@@ -18,7 +22,7 @@ const Products = () => {
     const arr3 = ["ACRYLIC INTERIOR 9 INCH", "EXTERIOR 9 INCH", "EPOXY 9 INCH", "ENAMEL ROLLER 6 INCH", "ENAMEL ROLLER 4 INCH", "ENAMEL ROLLER 2 INCH", "SET ROLLER AVAILABLE IN 4 INCH AND 6 INCH", "PAINT TRAY"];
     const arr4 = ["PUTTY BLADE 2 INCH TO 12 INCH", "ALTEK BLADE 3 INCH TO 14 INCH", "PATTA ULI"];
 
-    const { choice } = useContext(productContext);
+
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(9);
     const pageNumbers = [];
