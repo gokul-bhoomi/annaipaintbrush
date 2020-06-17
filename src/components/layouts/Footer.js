@@ -19,7 +19,7 @@ const Footer = () => {
         >
           <p>© 2016-2020 ANNAI PAINT BRUSH</p>
         </div>
-        <a className='grey-text text-lighten-4 right develop' href='#!'>
+        <a className='grey-text text-lighten-4 right develop' href='https://www.linkedin.com/in/gokul-kumar-52aa86195/' target="_blank" rel="noopener noreferrer">
           @Gokul Kumar
         </a>
       </div>

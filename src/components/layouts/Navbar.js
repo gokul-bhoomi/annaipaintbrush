@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href='/' className='brand-logo'>
             <img
               src={require('../../media/annai_logo.png')}
-              alt='logo'
+              alt='Annai Logo'
               className='logo'
 
             />

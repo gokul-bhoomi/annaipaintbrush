@@ -12,7 +12,7 @@ const Cards = () => {
                         <img alt="Quality " src={require("../../../media/card/quality.png")} style={{ width: '128px', margin: 'auto', paddingTop: '1em' }} />
                     </div>
                     <div className="card-content">
-                        <p>Our products are best in quality and durable </p>
+                        <p style={{ textAlign: 'center' }}>Our products are best in quality and durable </p>
                     </div>
 
                 </div>
@@ -34,7 +34,7 @@ const Cards = () => {
                         <img alt="Delivery" src={require("../../../media/card/delivery.png")} style={{ width: '128px', margin: 'auto', paddingTop: '1em' }} />
                     </div>
                     <div className="card-content">
-                        <p>Faster delivery of products to your doorstep</p>
+                        <p style={{ textAlign: 'center' }}>Faster delivery of products to your doorstep</p>
                     </div>
 
                 </div>

@@ -64,10 +64,12 @@ const Home = () => {
         <Cards />
       </div>
       <div className="parallax-container" style={{ height: '300px' }}>
-        <div className="parallax"><img src={image} alt="brush" /></div>
+        <div className="parallax"><img src={image} alt="paint_brush" /></div>
       </div>
       <Testimonial />
-      <a href="#top"><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Use Navigation on top left corner</button></a>
+
+      <a href="#top"><button className='btn' style={{ margin: 'auto', marginBottom: '2em', display: 'block', borderRadius: '50px' }}>Use Navigation on the top left corner</button></a>
+
     </Fragment>
 
 

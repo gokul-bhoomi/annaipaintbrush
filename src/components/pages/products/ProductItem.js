@@ -15,7 +15,7 @@ const ProductItem = ({ src, text }) => {
         <div className="col s12 m12 l3 product">
             <div className="card">
                 <div className="card-image" onClick={onClick}>
-                    <img className="modal-trigger" href="#modal3" alt="brush" src={require(`../../../media/products/${src}.jpg`)} />
+                    <img className="modal-trigger" href="#modal3" alt={src} src={require(`../../../media/products/${src}.jpg`)} />
 
                 </div>
 

@@ -19,18 +19,18 @@ const Slideshow = () => {
               <img
                 src={require('../../media/slides/1.jpg')}
                 style={{ zIndex: '-1' }}
-                alt='roller'
+                alt='Annai Brush'
               />
             </div>
           </div>
           <div className='each-fade'>
             <div className='image-container'>
-              <img src={require('../../media/slides/2.jpg')} alt='brush' />
+              <img src={require('../../media/slides/2.jpg')} alt='Paint Roller' />
             </div>
           </div>
           <div className='each-fade'>
             <div className='image-container'>
-              <img src={require('../../media/slides/3.jpg')} alt='annai' />
+              <img src={require('../../media/slides/3.jpg')} alt='Touch Wood' />
             </div>
           </div>
         </Fade>
