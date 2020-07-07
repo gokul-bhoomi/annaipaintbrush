@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.loading {
+  text-align: center;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  color: #3e8e41;
+  font-weight: bolder;
+}
+
+.modalimg {}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

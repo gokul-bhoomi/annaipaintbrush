@@ -1,8 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import productContext from '../../../context/product/productContext';
 
 const ProductItem = ({ src, text }) => {
     const { setCurrent } = useContext(productContext);
+    const [state, setstate] = useState(false);
+    const setLoad = () => {
+        setstate(true);
+    };
     const onClick = () => {
 
         let data = {
@@ -13,10 +17,10 @@ const ProductItem = ({ src, text }) => {
     };
     return (
         <div className="col s12 m12 l3 product">
-            <div className="card">
+            <div className="card" >
                 <div className="card-image" onClick={onClick}>
-                    <img className="modal-trigger" href="#modal3" alt={src} src={require(`../../../media/products/${src}.jpg`)} />
-
+                    <img onLoad={setLoad} style={{ display: state ? 'block' : 'none' }} className="modal-trigger" href="#modal3" alt={src} src={require(`../../../media/products/${src}.jpg`)} />
+                    <p className="loading" style={{ display: state ? 'none' : 'block' }}>Loading..Please Wait</p>
                 </div>
 
                 <div className="card-action" style={{ textAlign: 'center' }}>

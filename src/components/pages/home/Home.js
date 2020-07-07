@@ -57,7 +57,9 @@ const Home = () => {
       </Link>
       <div ref={sectionRef}>
         <Sketch />
+
       </div>
+
       <h3 style={{ marginTop: '1em' }}>Why choose us?</h3>
       <div ref={sectionReff}>
         <Cards />
