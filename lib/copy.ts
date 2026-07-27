@@ -47,8 +47,6 @@ export const copy = {
     whyPriceBody: 'Wholesale prices that stay fair, without cutting the quality.',
     whyDelivery: 'Delivered fast',
     whyDeliveryBody: 'Quick delivery to your shop or your site, anywhere in India.',
-    visualizerTitle: 'Try a colour, with a roller or a brush',
-    visualizerLead: 'Pick a shade and paint the wall yourself. A quick way to settle a colour with a customer before anyone opens a tin.',
     testimonialsTitle: 'From the people using them',
   },
   products: {

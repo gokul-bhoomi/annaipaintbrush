@@ -80,14 +80,30 @@ export default function Footer() {
             {'–'}
             {year} {site.name}
           </p>
-          <a
-            href={site.social.developer}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-ink-600"
-          >
-            Built by Gokul Kumar
-          </a>
+          <p className="flex items-center gap-1.5">
+            Made with
+            <span role="img" aria-label="love">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-brand-600"
+                aria-hidden="true"
+              >
+                <path d="M12 21s-7.5-4.7-9.5-9A5.3 5.3 0 0 1 12 6.6 5.3 5.3 0 0 1 21.5 12c-2 4.3-9.5 9-9.5 9z" />
+              </svg>
+            </span>
+            by
+            <a
+              href={site.social.developer}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-ink-600 underline decoration-line underline-offset-4 transition-colors hover:text-brand-700 hover:decoration-brand-600"
+            >
+              Gokul
+            </a>
+          </p>
         </div>
       </div>
     </footer>

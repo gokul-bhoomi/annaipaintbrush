@@ -4,6 +4,7 @@ import './globals.css';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import PagePainter from '@/components/PagePainter';
 import StickyContact from '@/components/StickyContact';
 import { copy } from '@/lib/copy';
 import { site } from '@/lib/site';
@@ -41,7 +42,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={`${sora.variable} ${inter.variable}`}>
-      <body className="bg-paper text-ink-600 antialiased">
+      {/*
+        `relative` anchors the page painter's overlay, which is absolutely
+        positioned to the height of the whole document so paint sticks to the
+        content rather than sliding about as you scroll.
+      */}
+      <body className="relative bg-paper text-ink-600 antialiased">
         {/* First tab stop, for keyboard and screen reader users. */}
         <a
           href="#main"
@@ -54,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <StickyContact />
+        <PagePainter />
       </body>
     </html>
   );

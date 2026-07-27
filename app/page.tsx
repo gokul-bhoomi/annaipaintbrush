@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import HeroShowcase from '@/components/HeroShowcase';
 import JsonLd from '@/components/JsonLd';
-import PaintVisualizer from '@/components/PaintVisualizer';
 import Reveal from '@/components/Reveal';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import { categories, products } from '@/data/catalogue';
@@ -217,28 +216,6 @@ export default function HomePage() {
               </Reveal>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* ─── Paint visualizer ──────────────────────────────────────────────── */}
-      <section id="visualizer" className="border-b border-line bg-surface">
-        <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
-          <Reveal>
-            <div className="max-w-xl">
-              <h2 className="font-display text-[length:var(--text-section)] leading-[1.15] font-semibold">
-                {copy.home.visualizerTitle}
-              </h2>
-              <p className="mt-5 text-[1.0625rem] leading-relaxed text-ink-500">
-                {copy.home.visualizerLead}
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={80}>
-            <div className="mt-14">
-              <PaintVisualizer />
-            </div>
-          </Reveal>
         </div>
       </section>
 
