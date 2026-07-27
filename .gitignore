@@ -5,14 +5,32 @@
 /.pnp
 .pnp.js
 
-# testing
-/coverage
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
 
-# production
-/build
+# firebase
+/.firebase/
+
+# generated images
+#
+# public/images and the PWA icons are derived from src/media by
+# scripts/optimize-images.mjs, which runs automatically on `predev`/`prebuild`.
+# Keeping ~2.9MB of derivatives out of git means src/media stays the single
+# source of truth for artwork.
+/public/images/
+/public/icon-*.png
+/public/apple-icon.png
+
+# data/image-manifest.json is deliberately NOT ignored: it's imported at build
+# time by components/ResponsiveImage.tsx, so `tsc --noEmit` and editor
+# type-checking need it present in a fresh clone before any build has run.
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local

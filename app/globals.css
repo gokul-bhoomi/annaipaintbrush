@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+
+/*
+ * Annai Paint Brush: design tokens
+ *
+ * The logo is a rainbow (green/cyan swoosh, multicolour wordmark), so the page
+ * chrome stays deliberately neutral and lets the logo and the product
+ * photography carry the colour. One warm accent, drawn from the vermilion of
+ * the old `deep-orange` nav so returning customers still recognise the brand.
+ *
+ * Contrast, measured against --color-paper (all AA figures for normal text):
+ *   brand-500  3.70:1  → fills, large display text (>=24px), never body copy
+ *   brand-600  4.94:1  → PASSES AA. Text links, small text, button fills
+ *                        (white on brand-600 is 5.06:1)
+ *   brand-700  6.77:1  → hover/active states, high-emphasis text
+ *   ink-500    5.89:1  → secondary/muted copy
+ *   ink-600    9.93:1  → body copy
+ *   ink-900   18.28:1  → headings
+ *
+ * White text on brand-500 is only 3.79:1, so it fails AA at 16px. Buttons
+ * default to brand-600 for that reason, don't swap them to 500.
+ */
+
+@theme {
+  /* Brand: vermilion */
+  --color-brand-50: #fef4f0;
+  --color-brand-100: #fde4da;
+  --color-brand-200: #fac7b4;
+  --color-brand-300: #f5a183;
+  --color-brand-400: #ee7551;
+  --color-brand-500: #e2542c;
+  --color-brand-600: #c6401d;
+  --color-brand-700: #a33218;
+  --color-brand-800: #822b18;
+  --color-brand-900: #6b2717;
+
+  /* Ink: warm charcoals, never pure black */
+  --color-ink-900: #16110f;
+  --color-ink-800: #2b2320;
+  --color-ink-700: #3a312c;
+  --color-ink-600: #4a3f3a;
+  --color-ink-500: #6e6058;
+  --color-ink-400: #9a8b82;
+  --color-ink-300: #c4b8b0;
+
+  /* Surfaces: warm neutrals, replaces the old white//8-colour-Materialize mix */
+  --color-paper: #fdfcfb;
+  --color-surface: #f7f4f1;
+  --color-surface-2: #efe9e4;
+  --color-line: #e2d9d2;
+
+  /*
+   * Category identifiers, sampled from the logo swoosh and darkened to reach
+   * AA. Used only for small chips and accents, never as section backgrounds,
+   * which is what made the old site feel like a colour swatch test.
+   */
+  --color-cat-brush: #a33218;
+  --color-cat-art: #8020a0;
+  --color-cat-roller: #0e8f8f;
+  --color-cat-putty: #2f7d2f;
+
+  /* Type */
+  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Fluid display sizes */
+  --text-hero: clamp(2.25rem, 1.2rem + 4.5vw, 4.5rem);
+  --text-section: clamp(1.75rem, 1.1rem + 2.4vw, 2.75rem);
+
+  /* Elevation: soft and warm-tinted rather than the old harsh black shadows */
+  --shadow-card: 0 1px 2px rgba(22, 17, 15, 0.04), 0 4px 12px rgba(22, 17, 15, 0.06);
+  --shadow-card-hover: 0 2px 4px rgba(22, 17, 15, 0.06), 0 12px 28px rgba(22, 17, 15, 0.1);
+
+  --radius-card: 0.875rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Anchored scrolling clears the sticky header instead of hiding under it. */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink-600);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink-900);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, branded focus ring on every interactive element. The old site had
+     none, which made the lightbox and nav unusable by keyboard. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-ink-900);
+  }
+}
+
+@layer utilities {
+  /* Scroll reveal.
+
+     Content is visible by DEFAULT and only starts hidden where scripting is
+     actually available, so a visitor or crawler without JS sees the full page
+     rather than opacity:0 text.
+
+     `(scripting: enabled)` is a real CSS media feature, which means no inline
+     script is needed to detect JS. An earlier version set a data attribute from
+     a <script> in the layout; that both tripped React's "script tag while
+     rendering" warning and caused a hydration mismatch, since the server HTML
+     had no such attribute. Browsers too old to know this feature simply keep
+     the content visible and skip the animation, which is the right fallback. */
+  @media (scripting: enabled) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.25rem);
+      transition:
+        opacity 0.7s var(--ease-out-soft),
+        transform 0.7s var(--ease-out-soft);
+    }
+
+    .reveal[data-revealed='true'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Honour the OS "reduce motion" setting: no transforms, no smooth scroll, and
+   crucially nothing that starts invisible. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Never leave content hidden waiting for an animation that won't play. */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

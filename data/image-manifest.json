@@ -1,0 +1,595 @@
+{
+  "products/ACRYLIC INTERIOR 9 INCH": {
+    "fingerprint": "1b5a6685d5677c22",
+    "base": "/images/products/acrylic-interior-9-inch-1b5a6685",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwBACdASoYAB0APuFgqk2opaQiMAwBEBwJYgDM0B6XDJZlgMTpqwfkzR0dSAD+w/GgrAbOg475+wl7uItbF1IltPa2JeA2duWQKCv5Jbp/otT6bxAn61n+x8sDRkAA",
+    "sourceBytes": 313662,
+    "outputBytes": 32086
+  },
+  "products/ALTEK BLADE 3 INCH TO 14 INCH": {
+    "fingerprint": "41415a1415572343",
+    "base": "/images/products/altek-blade-3-inch-to-14-inch-41415a14",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQBACdASoYAB0APu1grE2ppaSiMBgMATAdiWcAAC51wZS2UhGQArGhBOKAAAAA/u1NTpP/8dDbXVpGOk+QaJ8HCQ/D9VlUBZCtOajeYwH8zlRZrCwO9Xmqe9LKhlUMFaYWAVTZbX2hCl4VYFQKAAAA",
+    "sourceBytes": 303141,
+    "outputBytes": 32275
+  },
+  "products/ANNAI PREMIUM MILK WHITE 4 INCH": {
+    "fingerprint": "ef583c1cc856587c",
+    "base": "/images/products/annai-premium-milk-white-4-inch-ef583c1c",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoYAB0APu1kqk2ppaQiMAgBMB2JYgC/7CHfh66WYfznMvLjfAyoJOAAAP7qdHTDcBwATbcJ0QS1SIiclO2ss1SIiwkOLuE7td+52mRm0G4M6gL1GbHG7w+hYXOtBibM5++2BAbK1EAKGtrEd7wvS/LCuWD+gAAA",
+    "sourceBytes": 118738,
+    "outputBytes": 48759
+  },
+  "products/ANNAI TOUCH WOOD 1 INCH": {
+    "fingerprint": "8043030b749b6cab",
+    "base": "/images/products/annai-touch-wood-1-inch-8043030b",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwBACdASoYAB0APtFSoE2oJKMiN+gBABoJZQAAiOMIha5OVktbnIhDhQmEuAD+8cw1lbOCL5qHbfcqS9xvVlsfYTGPvG8+tqa6mmFfEhJGfx9Hanloe8y9BQYOGxKSee+i8kTgNWmCfHRxHAA=",
+    "sourceBytes": 335365,
+    "outputBytes": 38848
+  },
+  "products/ANNAI TOUCH WOOD 1.5 INCH": {
+    "fingerprint": "8475083fedb79327",
+    "base": "/images/products/annai-touch-wood-1-5-inch-8475083f",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQBACdASoYAB0APt1apE2opSOiN/qoARAbiWMAygBXb/B1OC8lWdGB/bJjvRrEgAD+83JNDBhO40RHIs5gFmtrtXRMxstegaalOt/37N6w2F1d/pxCfomtRN9IMAsjwRHIBuxKqDGfWxYJbj4VFQLdvs3hT8AA",
+    "sourceBytes": 353675,
+    "outputBytes": 49952
+  },
+  "products/ANNAI TOUCH WOOD 2 INCH": {
+    "fingerprint": "8b7cd75294c03cd5",
+    "base": "/images/products/annai-touch-wood-2-inch-8b7cd752",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQBACdASoYAB0APtleo02oJaMiN/qoAQAbCWIAxkBXXTP/CYQbTJaPBNYbY5BugAD+83inIyk3d//2mX6t8WQhAhOeelbOpL6yvtTojTr6bFMy5SI7hd/4Od/DJV3uKWjVFmJpMc52XF1hOdJOEWmcvMdUKKqUBL8yRTrGQiAAAA==",
+    "sourceBytes": 331923,
+    "outputBytes": 53993
+  },
+  "products/ANNAI TOUCH WOOD 2.5 INCH": {
+    "fingerprint": "5a531ed602236d1c",
+    "base": "/images/products/annai-touch-wood-2-5-inch-5a531ed6",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoYAB0APt1apE2opSOiN/qoARAbiUAYUArrpoAFvhA5LVYfcjWX6aYAAP73BsInrKgeY7VHIBGiR6tfY6f4TtzlYtKALbEYGAux9xfOX5V1GoU06HoSmmv/Z7PqMy4++PvtkroNfgQRtY7+ZLTS1ccOD2tvJwzY3lXxpEUn7gAM/ZYllvUAAA==",
+    "sourceBytes": 340814,
+    "outputBytes": 61650
+  },
+  "products/ANNAI TOUCH WOOD 3 INCH": {
+    "fingerprint": "6065644ca23a6417",
+    "base": "/images/products/annai-touch-wood-3-inch-6065644c",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBQCdASoYAB0APt1apU2opSOiN/qoARAbiWoAxNhXXghusilLwvvWAqUMcF0sl5QAAP72CHWIZ1WJqQI4d3i66lv5rxZCNupNp5GnPb2/FgtjdzsO7ytKYwtts0ZntuFqHjZbhCkc+2iXkTrv03eay8ZEBvrxa1FDdvINg5HjPoKipa3Kd7efce/n+5x8rLsONAAA",
+    "sourceBytes": 338007,
+    "outputBytes": 61133
+  },
+  "products/ENAMEL ROLLER 2 INCH": {
+    "fingerprint": "26084fa1707a0efa",
+    "base": "/images/products/enamel-roller-2-inch-26084fa1",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBACdASoYAB0APu1sq08ppiOiMBgIATAdiUAZsIaOFLw+0y2z4Op/sjAywAD+6oBDtrZjmKfIqiY4NWDnKHddyJCQOtdozUuyc34rByQTpuOB0EH0kp3sEzb5//A9M7jhgAAA",
+    "sourceBytes": 274057,
+    "outputBytes": 16620
+  },
+  "products/ENAMEL ROLLER 4 INCH": {
+    "fingerprint": "0ab1084e32a53d86",
+    "base": "/images/products/enamel-roller-4-inch-0ab1084e",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBACdASoYAB0APu1oqk2ppqQiMBgMATAdiWIAyrQyyLFU2YjKIQwRft6AAP7nQYJ5dNFsa7eRVgbnTlDfELqMyu0iZw7fmP7qsdFiUyROuJWRMmNc1ijxN0NaO5ssCAA=",
+    "sourceBytes": 311545,
+    "outputBytes": 20661
+  },
+  "products/ENAMEL ROLLER 6 INCH": {
+    "fingerprint": "abf3012f36b5701e",
+    "base": "/images/products/enamel-roller-6-inch-abf3012f",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYAB0APuVgpU2pJaOiMAwBIByJQBmaBYTliJGLHH3iCAD+70a81KBGY/F+Be+BlChxKDcpMFRGAd8U79rDE2fOMj+HsAHeV1Rl5/DO0sQQJ4Q3bEAAAA==",
+    "sourceBytes": 269523,
+    "outputBytes": 19186
+  },
+  "products/EPOXY 9 INCH": {
+    "fingerprint": "4b88f440d1bc4863",
+    "base": "/images/products/epoxy-9-inch-4b88f440",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYAB0APt1YpU2opSOiN/qoARAbiWMAAFJvIPGLylQITGhOjmoAAP7GzqXfnCFtGPKjzM3l8W/gR4F1jro4v0NcE3uJvzH5N5/5IwvT/9Tcg3NXvzbDX8jMXoU8e1PvSP4SGa8AAAA=",
+    "sourceBytes": 353374,
+    "outputBytes": 27744
+  },
+  "products/EXTERIOR 9 INCH": {
+    "fingerprint": "a66d1aa02df8a349",
+    "base": "/images/products/exterior-9-inch-a66d1aa0",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoYAB0APtlgo02oJiMiN/qoAQAbCWMAAF2lGNlFM1OBJHGk88WYAP7JD+aZSah0tkyftwxz5OkevpnDlYU2rAOhDEWh0IX/m8pe/U2gl1G/zbDX8jMXoBRz5BsWvlfDGgAAAA==",
+    "sourceBytes": 382050,
+    "outputBytes": 37826
+  },
+  "products/FLAT BRUSH AVAILABLE IN ALL NOS": {
+    "fingerprint": "7d85e971543cf6d9",
+    "base": "/images/products/flat-brush-available-in-all-nos-7d85e971",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAwBQCdASoYAB0APu1qsFAppiSiqAqpMB2JbADIx0iA6OUVBDHrgRsJ2kcxS5g+zpAvAAD+78Qmg16RFP5Ib/yCBLAfearNyJeH0bP3lBvt3ocBnKJJ7AWCcKlCT51iAnN8QyTOoPgkubtN1uvM/RlxyyZPl5pukeM++gHVBMrJEzkImnOgr+mYb1nhWsoDfR992750UUNpRqxOKOJbQ5GEJ/CzJ1/jddy1o2MGbjuQ5wl3qAAAAA==",
+    "sourceBytes": 317207,
+    "outputBytes": 64484
+  },
+  "products/HOLLOW SINGLE 4 INCH": {
+    "fingerprint": "c6ac8e102b01fdf9",
+    "base": "/images/products/hollow-single-4-inch-c6ac8e10",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACwBACdASoYAB0APuFeqE2opSQiMAwBEBwJZADCgFfd8KvTn6BMsT7X8vd1OugAAP7xz4qwtSJyw5ky4W3F5/Y7NE3QjNRqHo1NHD/60gjTKN6Vj0jxBx8gM7juQg79e8z71Wacd7oqQsRtXceC4o4eYtUWkoPZxjePAP46iUML+r/9Naw+AA==",
+    "sourceBytes": 376170,
+    "outputBytes": 71753
+  },
+  "products/PAINT TRAY": {
+    "fingerprint": "8e575dbf0d9b55b4",
+    "base": "/images/products/paint-tray-8e575dbf",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACQBQCdASoYAB0APuVgpE2pJaMiMAwBIByJbACdMtCEUIDkAALNmgrbjeWwY1UhOrDWmn8ACgD+8EmJ3/sqcNq+IZ28S/+3fa9dfrruModxQf6oOxgTrmzsiYgDKZWUY8gpAji/Is8sRSuPwK8C/ItSmmwH76mTRmKa4+7q+laLhgn0k75O+CT9Puv2P01PytnGCATWF1Mx5rySTXT3spqJsS7WrZAf49K0EvpN2rFA3DAyzHYxo0AA",
+    "sourceBytes": 305519,
+    "outputBytes": 49777
+  },
+  "products/PATTA ULI": {
+    "fingerprint": "d0bedd54a355af2e",
+    "base": "/images/products/patta-uli-d0bedd54",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoYAB0APulgok2pJaMiMAwBIB0JZQDNwCHf38/J3WJNv3iAAP7xw9MjDUMfBLYsj12A2qKSzL38m/nrQkdBbf5M0CVEEIBViF9/ryV3pCqCZkAA",
+    "sourceBytes": 206250,
+    "outputBytes": 11250
+  },
+  "products/PUTTY BLADE 2 INCH TO 12 INCH": {
+    "fingerprint": "f54fe8b56c065755",
+    "base": "/images/products/putty-blade-2-inch-to-12-inch-f54fe8b5",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYAB0APu1oqk8ppiOiKA1RMB2JZwDOdEXfwGdNhaxetMCVFXHiQAD+9wWRKLD4r5VXRCrySwWjhEJWhrMugkTbMWcB1AZIyXJ6noMCtRmGO7MWJVug3uhAT1WUVRysVigAAA==",
+    "sourceBytes": 276251,
+    "outputBytes": 18805
+  },
+  "products/ROUND BRUSH AVAILABLE IN ALL NOS": {
+    "fingerprint": "435aa37f25df2277",
+    "base": "/images/products/round-brush-available-in-all-nos-435aa37f",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABwBQCdASoYAB0APu1qrVEppaQiqAqpMB2JZwAIEDijDdvsVscg1/CQJjdH9QHuW9LSnXpgAP7tcyq6eyGco5wG4Zglno0vmokZrLhX+3hKD988p2vRFsBQkN4Ltv5mbVgW9Dnubh+FD2C85kH5OS+Dw0kH34mw53UEi+rs92l7cVzTGZXGrHvszBTUqm7ELpaqkSIzVxKnzFWB6xFogmZj85w6Vt7AV02yyYbrJFDAAA==",
+    "sourceBytes": 328290,
+    "outputBytes": 50897
+  },
+  "products/SET BRUSH": {
+    "fingerprint": "c9f3841054e20e5e",
+    "base": "/images/products/set-brush-c9f38410",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBQCdASoYAB0APu1kpk2ppaMiMBgMATAdiWcAw7CVUDyS46wfXb2WpivqmZB2DTtf0SgA/uciawfgBaCs7ov38O91xkBmGJcvq+8x/2dt9Y3NmdMIVAAB+mGiVI4E2tPFXy19dzCENyghvxuKi1ZwWGaHHTOd6HR8RR9APY4yKSg1aqRR9yIkg3tKQc5doteAAA==",
+    "sourceBytes": 350627,
+    "outputBytes": 48796
+  },
+  "products/SET ROLLER AVAILABLE IN 4 INCH AND 6 INCH": {
+    "fingerprint": "3570deb81fb92568",
+    "base": "/images/products/set-roller-available-in-4-inch-and-6-inch-3570deb8",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYAB0APu1eqU2ppKOiN/VYATAdiWYAzNBFYFBGQte6ufKI5YAA/vHP9jlisNtdBjioaRX2qD5WFxkXipxiGyA9meuuIZP1zm3q/rsMphm+BlN2BdkmsOfbGhjL8wAA",
+    "sourceBytes": 353970,
+    "outputBytes": 30201
+  },
+  "products/TAPPER 0.5 INCH": {
+    "fingerprint": "78cdb903de4fa2fe",
+    "base": "/images/products/tapper-0-5-inch-78cdb903",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoYAB0APu1eq1AppKOisBgIATAdiWUAzuw0b7abwC66mmx2vl2k1dIQAAD+77T26hujCSJrqKUyAadN21UqvYNrjIjUt5eo8OGxL+NUDDO3knC32H2BqxILS6dXSDfGBAA=",
+    "sourceBytes": 330359,
+    "outputBytes": 23354
+  },
+  "products/TAPPER 1 INCH": {
+    "fingerprint": "5aae6b8e8fad7b96",
+    "base": "/images/products/tapper-1-inch-5aae6b8e",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYAB0APtFUoU2oJKMiN+gBABoJQBnOhkoJAGk0h3mGjIAA/ucok+9RTzqvuq7uVpJ7HjB1I31vzlMzTzEz3zuSl/C+9bcmF3nYGZXds/uu3V7BuIpTRLwh/QAAAA==",
+    "sourceBytes": 342470,
+    "outputBytes": 26746
+  },
+  "products/TAPPER 1.5 INCH": {
+    "fingerprint": "2efac622d290c0a8",
+    "base": "/images/products/tapper-1-5-inch-2efac622",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYAB0APt1co02opSMiN/qoARAbiWIAxzBXb8bKsk7/mvCGBEzWgvgAAP7xzJcV0f+JNPsC4qCr5/i5XsMUQ/WuwiApGFwZTWkMcECzLBPDYEhiKhU3+IH8CnaLtEodEgwhCpGUFIE6HEHi4nu2QAAA",
+    "sourceBytes": 335726,
+    "outputBytes": 45280
+  },
+  "products/TAPPER 2 INCH ( DOUBLE BERTH )": {
+    "fingerprint": "c8bf8d4e69b748a5",
+    "base": "/images/products/tapper-2-inch-double-berth-c8bf8d4e",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQBACdASoYAB0APtFYok2oJaMiN+gBABoJZADCgDJQ14TgJX0g+9e1wJlWzKIwAAD+5xhq5TKKkWPmjnde66cRLYx7cEMpn3ksfNPkaFHvcJMKdKCuyEODwKRZTzYBAsfz9nOoaP8s4HaZxE9CFNGBupqpTvQoQcI5QBRPigA=",
+    "sourceBytes": 373969,
+    "outputBytes": 45534
+  },
+  "products/TAPPER 2 INCH": {
+    "fingerprint": "1ab78c1e958827e8",
+    "base": "/images/products/tapper-2-inch-1ab78c1e",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwBACdASoYAB0APuFeqU2opSQiMAwBEBwJYgC/7Ffvfhen/snBtBBKxGvxk0NXAAAA/vHMNZUhMxOwHufdz4w2T1Rn3FJArcFOlkreff+xQJuZHGw5/nTpS4eS+aOkPtjVnh+dNQQouvom1FhaoRYy1vswgAAA",
+    "sourceBytes": 354989,
+    "outputBytes": 39696
+  },
+  "products/TAPPER 2.5 INCH": {
+    "fingerprint": "ef396457ed42f3c9",
+    "base": "/images/products/tapper-2-5-inch-ef396457",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQBACdASoYAB0APuVepU2pJSOiMAwBIByJZAC7AFfvmYkGCWR06otklNuqnX5PsAD+9+uPdHdkBhJdT6SjhJPFzMMQm1bqis4hoECml0+nd4UQM3s0Ie5YtYWiuu+3W+MPrps0Lc9MffH32xbRfrwQQ9zGdXPpgNViyhZHRYGqSsBEBmoKC9YAAAA=",
+    "sourceBytes": 334397,
+    "outputBytes": 50905
+  },
+  "products/TAPPER 3 INCH ( DOUBLE BERTH )": {
+    "fingerprint": "0d1cb22b5acd12ba",
+    "base": "/images/products/tapper-3-inch-double-berth-0d1cb22b",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACwBACdASoYAB0APuVgpE2pJaOiMAwBIByJZgC90FfeCAiMRKyTthza++wtUS2AAP701tmX7XaJfRY85Z1oqfgdqBRwSf5r0U9hTN7I/Yh94dWM1JnmDAskmuT5utTyZRwtetTAaYKbbD+GmsKLKiR06z3LCxRtEdsP87nF8YCVQaxVpeOrc8QGAAA=",
+    "sourceBytes": 360254,
+    "outputBytes": 53496
+  },
+  "products/TAPPER 3 INCH": {
+    "fingerprint": "70e12be8a1dc5d70",
+    "base": "/images/products/tapper-3-inch-70e12be8",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoYAB0APt1apU2opSOiN/qoARAbiWYAuwBXXTHT3h9E9nPFh+bSUAD+78jksYZiMARjQCGSeWJ9DpeNUMAh00HBqVggXYLjWf0cFY0DSf4xqGZAYuNg47KtcMyYLlgmeBYSgHZh3VofD5I/tzETGXI80SalIMu4AAA=",
+    "sourceBytes": 359776,
+    "outputBytes": 50613
+  },
+  "products/TAPPER DOUBLE 4 INCH": {
+    "fingerprint": "1b5d1f55f6c209f0",
+    "base": "/images/products/tapper-double-4-inch-1b5d1f55",
+    "width": 736,
+    "height": 900,
+    "widths": [
+      320,
+      480,
+      736
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoYAB0APu1gqE2ppSOiMBgMATAdiWwAHaXhAdh4NuUx8x31pu2NKVpvAAD+9Nbi+iZxxmErku1TSfZkZ7xjip4H3ZmGb2xEp+DvZxTWzFsuU09hNOFPWlUbcqwxVNcpPTvQdU1pbD38GCI9V7D7HjK9K0RPrs0YCK3mVhumMLMpZpeAAAAAAA==",
+    "sourceBytes": 364223,
+    "outputBytes": 49159
+  },
+  "slides/1": {
+    "fingerprint": "a1178c327e4d0602",
+    "base": "/images/slides/1-a1178c32",
+    "width": 1687,
+    "height": 880,
+    "widths": [
+      640,
+      960,
+      1280,
+      1687
+    ],
+    "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBACdASoYAA0APu1iqU2ppaOiMAgBMB2JaACdIExgr0b+4Kh2fldZ5QAA/vdkg4vx5PfjIsx3VqCmT7OF/77sB+LAda4cIBbzwLMUQHxqCtgGA0fGhKlzQ7866WJnbP3on7Q+JFS4TmR/Qhsq1jDIAXW/d/XR4vS7a8F4NoXcQpYQXjiqu3c43fREd9wvDUAAAA==",
+    "sourceBytes": 1017218,
+    "outputBytes": 534028
+  },
+  "slides/2": {
+    "fingerprint": "75eefba0d2a86370",
+    "base": "/images/slides/2-75eefba0",
+    "width": 1684,
+    "height": 880,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBACdASoYAA0APu1iqU2ppaQiMAgBMB2JaAAD5SoQuYPsdmQLKE9d+OtAAP7x3DLP4N37xm6MxYUota76mwAxryivmL1aA/TeMwFBKO4HWjQocm7wxAQy+U+eJpoFs7D3PkXj6qACOtCwfVo+ZG1qQzG3Z6amq/dAvildEan4zlVc/scigIo+MWqj77w7mUIS6Lt+zoAAAA==",
+    "sourceBytes": 409097,
+    "outputBytes": 111109
+  },
+  "slides/3": {
+    "fingerprint": "a9b8139ac010c331",
+    "base": "/images/slides/3-a9b8139a",
+    "width": 1684,
+    "height": 880,
+    "widths": [
+      640,
+      960,
+      1280
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAA0APu1iqU2ppaOiMAgBMB2JaACdMoADQI9MZHFqyEHeAAD+0yr8Uozv8johTzbo3Sh8/cTfVrxT/jflR4jmUhZpQhP2kcYOjFXm0tZlDaa1H4wqBBkUFCHW/pfAdbbnLJiM/GcRgy9tMAAAAA==",
+    "sourceBytes": 454549,
+    "outputBytes": 90249
+  },
+  "card/delivery": {
+    "fingerprint": "c74e0ea602beefc8",
+    "base": "/images/card/delivery-c74e0ea6",
+    "width": 128,
+    "height": 128,
+    "widths": [
+      128
+    ],
+    "placeholder": "data:image/webp;base64,UklGRvABAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSOgAAAABgFxre6Ll/RLc3V1qoATtwWFHGRThbN1a0B2HnbvL6nchk8yHjHYQEROA4IVvt8BFU1ur57YGKRxKLzPRmMeItQ9QDoCyNzbs0fBZX5eEAMpeWdteOWm+T0eIUPbGhj2nDBueAwWiFY8hENZ8FIRljOaXsgAMs+G38sDKQrFt24ft8MhZZX1r5WxF1LeV5eeysg9Oqex3ml1NUmW+1VNF0fyxTmfMycbe7v+9jTuVSprVfIHelK24HxL/JWY4zY9lQA6mvyKzkMJRUv5K/GEYAiCUV4PgTqgrBgGABCS8CJCEIxG8EyFMVlA4IOIAAADQBQCdASoYABgAPu1qrlCppaQiqAqpMB2JZgDGluAwSX14xvAt79Zu4jc1+SaOd3Vw/oStNRvaAP7yb25p4N5ldJsmGgzS6lrFHmj3NBO1hR9GwwOsNt9ZRwrihXOsMuWiKnwGcBF14ASEtT0M+1w41eaPrqJgN7coE1e+Hwhk9sO4QzOLHkA1mThZ5gLp9rTh3yaxlgNxHnU3RNHL7nfl48LAZskgEe4hCuzUzPlltR53xePo5QADUpSHqAbkqusayf3d1Z8K9XFeh/MPwhG3gYX+MTgWEyeqvnLA9gzAOAAA",
+    "sourceBytes": 4019,
+    "outputBytes": 3165
+  },
+  "card/price": {
+    "fingerprint": "0f4be2cdc9a7a15f",
+    "base": "/images/card/price-0f4be2cd",
+    "width": 128,
+    "height": 128,
+    "widths": [
+      128
+    ],
+    "placeholder": "data:image/webp;base64,UklGRt4BAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSL8AAAABcFzbtpNcHmNwzMhQSG4C2jE0QarB1ARSjlk/75p9JUSEArdtlPaYIa8AAPGBTrLIskXSAXzBp0Uw2J6opPK07UPkMyIsqeruLztVlgHkI0Y1nVN+WJ1jHUHgobXjTfnDemMVwhPkvPGPb8whmLDRf9KGY2BFx792XKK3p/6Xct+L37kli2e8W3TnNLMqtctesQ+xL2R/T/v7G/8rg3gIK9v/2nkABMEffooA8s1bf/PN2+aLt598pukiaX/xCQBWUDgg+AAAADAHAJ0BKhgAGAA+7WqrUSmlo6KoCqkwHYlsAJ0yhHUHrvDypVt9Xo/8lAaeNaKhG5i24WMd2dKxgEFUegy//xsuSACeAyg8NDUzhm4znI2As28V7yeBiirddCmYOQp3M5Ftf7izpQkzkUSwdLXdslLH6Fc6tzasBWRi942QScodtakbmVWqwM4gGntl39wdyXN9/+B3M4MS9+xgtTHelf5m8jWMh33iJ6UDVE+pyJWdYX4BmP07h6EhBwOMfJ79DN3hl2rAghfbA12OSk0C1xcEY9BlIl7+aXAPPU6Z/ISce7f8f/k2sZfhzj6xATvqpfqbUuOv3AAA",
+    "sourceBytes": 8507,
+    "outputBytes": 4936
+  },
+  "card/quality": {
+    "fingerprint": "f410500bac1b5ed9",
+    "base": "/images/card/quality-f410500b",
+    "width": 128,
+    "height": 128,
+    "widths": [
+      128
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpICAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSFYBAAABkGPbtmlbc+31jG/btm3bIVPbRgGszAptM7LtzNbea36cfcsQEROARBGgYJ/6ABxSFhQYMfAiw7hmtSGpCLJOM9CbNxsJTUHRhb9DoAXPG5CYQ5dHDEbSAn9MiwnyHjEw6jkWmuBQ7iMt9psbInDYSx8zDogI8u8zpNIz4lDxOy32i4uRlgDBLvqIGbtAY9nr+SuQNM9XfeCQrJi4+Q3NB2+BB1ZAkhyqfHm0/spNI18/PnOKI6CRPbSX59Yuf7Vt5uWbno+KQgAoRjBY4FDkoNQLes+VUEBQ7DHDb25COtIxnN4sdIRCsYq/jS/LQEQcdtMHXs6AoCtpnqOhAByqvqF5zoNmXXxx9Av3weH/NEwkb9551xAFazt3/1ftCMSdZlvUrQRAsWcZFMkOrZ8WhQAup3StST0rFNAEzavUbH6L0rkKcZkF8wvmpkmCpGUXzi2YpQJWUDggFgEAADAHAJ0BKhgAGAA+7V6pTimko6IwGAwBMB2JbACdM5M4T7XTL3bPnqtMA3kj/SkVfu1Qr0GNfgCZbxVGAWGKZHBY6AD+r5h6C9tzlvfiLut/bAydV9Ze7UL9dLxrwEPB3Wen/NTt624QiTqJAKG1tCC/ZTtHPhPfCdpZFpCuk3sXmv/sNMu2Zc7YGkAJICAWPB6vubbjf1VKit3CTMgawQIEtQ3xnHLX2667rnw3BQJE8cYO+v8eUsZJH2qRRZSAkqaj2qIVnrNYfz3Kpi0i079AZt5ccb9Ff48evRwpOaiIuJpX/oDs5cWZUKLHnBh/BFxSe1E9GO++66ppDQVlEcSJqjCBfnv9bJLXjIvLXtTbnJXAAAAA",
+    "sourceBytes": 17190,
+    "outputBytes": 10138
+  },
+  "contact/contact": {
+    "fingerprint": "7c00a586221313a8",
+    "base": "/images/contact/contact-7c00a586",
+    "width": 2000,
+    "height": 800,
+    "widths": [
+      64,
+      128,
+      640,
+      1280,
+      2000
+    ],
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYAAoAPu1kqU2ppaQiMAgBMB2JZQCdG1/AWLrv1BuOiNIAAAD+8dDUq47gew5EuxzPpSdF296XK6XbtcROdJoUjNr3nqIEeR05PTMP0uEr6ViOlsLNy64YnH/QnzcVw4BKfOjYNS/okAAA",
+    "sourceBytes": 128665,
+    "outputBytes": 90028
+  },
+  "contact/email": {
+    "fingerprint": "0496535ce906af1c",
+    "base": "/images/contact/email-0496535c",
+    "width": 64,
+    "height": 64,
+    "widths": [
+      64
+    ],
+    "placeholder": "data:image/webp;base64,UklGRlYCAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSDEBAAABkCvbtmlbY+19cG3bVmTbtm3btq3MRoyHyO/lRvoi28fXHxARE4BrV1xaSlCaPh2N1M3esbGxsaGpfpDTMFDlAwqgEPiEBXIKGmUeyCnNq2WlfRY/FQPl9rqrJU1T3pGnI0y02OvMzo0POkV/kwAtgoBd/NjSaKZjc8k5jNMpByKEQO22Z66bzG59zmOLpLdh9xxBCVDwPMqbdYOSOlMb8ZzHG1Oi/NPUDlsICAPKtzlNw28glIJ/IUjcegCQ//uOphHn+SnywYLx9ujx3yzA7jS+ZWEShCBzTQVMWJ/Gr9RNHBQFEDYLdqfxrltSAE0zAVCwOI1vWYkkCOAZExEVVM55Isp5r7a1paW54x3nP4fzj/NcGMAwtDA3Nze3qB/uH+gfXu4VdYFEOEM4fYpzBQBWUDgg/gAAAFAGAJ0BKhgAGAA+7VyoTamko6I39VgBMB2JbACdL4E+esAxR31K95AK8D2nEG/xBqN3GlIc84Vo4OEAAP65Bh36k+fkS8InjJD5m4ICuxwaiiHY6gVLcJezrG14OLKEeLlg478R9mkbHeozfUPJE5ZqSloT3wKn4gOsX5QsXiHwZNUX2pCVmBLvOreWGmzIFPBr77/VRWWeOPwEaM8LxQ8tl8nvllpP+g4u3nmhM8yLd663BAq8pXixIKHEsY4vBvcgSMOHczR4/zx/CFY2ajGUKd+V5q6lM8f6x9v3tV//BlPqb1HYxB/G/+YrH+5V547ALuF6UhBDrwCi/wAA",
+    "sourceBytes": 1954,
+    "outputBytes": 2394
+  },
+  "contact/location": {
+    "fingerprint": "6a4eacf88b5ea2f4",
+    "base": "/images/contact/location-6a4eacf8",
+    "width": 64,
+    "height": 64,
+    "widths": [
+      64
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqQBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSLcAAAABgFvbtmpl3XNwiVxKgOgNqoBOvhXAIIdKvAHNPP7Rj7DY3e9G73tIARExAfy/1mTWZAUYX1ouY2R2Y31mGMthTJ4qRp1MYEnG2LVepVddjWJpy1K9VqtLi0mB7gMdDMHggfa7CCk9x5qnrZU5HfekAHtawYx17ZDs1PRawqpSBU8J+LaeGo0XbTohBWP8/jXGeJdhpDvTenrSFE7OQPO2tNVEyIORPTxkGPmdWhWnyACBYt35jwEAVlA4IMYAAABQBACdASoYABgAPu1qrFEppaQiqAqpMB2JbA21nxAOsQgAORsQZ9lY9htgAP6dV9x54RuYF01N0/gAPeKO9UkSHUPjod+lo6j7vE9pQrgoLXuI1/bOQx/Cdm0bucYW/WMMRMe3YJ9qauDdJvgxVSJAhE9Z6dArjx0b90By2jPtoniev+JuMtIkQ2QsNusmapFgBIGrp+ty0fhGYFaNvgN//9DmLWi9Z4Z1Jcj6mAUaxsha9KlYrzkEVQhpE1P8jBMTBcQAAAA=",
+    "sourceBytes": 1866,
+    "outputBytes": 1873
+  },
+  "contact/phone": {
+    "fingerprint": "5f4e47ce1ed7e493",
+    "base": "/images/contact/phone-5f4e47ce",
+    "width": 64,
+    "height": 64,
+    "widths": [
+      64
+    ],
+    "placeholder": "data:image/webp;base64,UklGRu4BAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSOQAAAABgKtt//nl+Xz/2dpsu1a7jqCr3Qdg28bW6LFj4NTG3+///59B3F0/pD0iJoB/0WHZyG6hcbS7t7e/t7/3c09nh9FqcXp2bnJeak52dk5m/tltJIrPE0EosreLUAjertc0g5lwyJo7vI/E04GP8zXFKBSaBsvvYlAKb5c5xWhz1WJXKXhZEGG6PX3vrghfM9NheHh6Mr7pfm0g0G1iJhQBof2iEry0l2SDsdyesbnZ2dne2dG56cWn53SD3vrXp2tN01w3Tk27OT+K/UIYO9DjUFgWtgbDUWL2KyQCUdjrEOwV/kJWUDgg5AAAANAFAJ0BKhgAGAA+7WCrTamlpCIwGAwBMB2JbACdLz1rVt9WybiIpC/3dJAwHFsyFhV4Q3YWdYAA/stDNf6ugeswr63A/PNTDgSuTD0dKREEOR5ifXYPDdhb6XGLhqUkTFTDXIoBQfKK+G3ehf9hnJvnt+r5aaGiaAtymqvX6dsKRKYq26Zh5EAi3RFyaqQQJ2jUujbhVWZ518ih7rOwUB9Of/6UgT8kO/9VQEEoK8BewnTTMEx7BW8xD/v2ex/JVMV1GXMfnwBbl155b6Ow/nyivUttBupaGUVVVJRDVk5lLgAAAA==",
+    "sourceBytes": 1256,
+    "outputBytes": 1952
+  },
+  "annai_logo": {
+    "fingerprint": "3ea8c22353169cb1",
+    "base": "/images/annai-logo-3ea8c223",
+    "width": 1960,
+    "height": 433,
+    "widths": [
+      320,
+      640,
+      960,
+      1600
+    ],
+    "placeholder": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4WAoAAAAQAAAAFwAABAAAQUxQSHIAAAABgGNt2zHnHS/Eto0NTGm1qGx7djGVbVQ2krTZQ5aQMidLiIgE9ycOEIBAACDg7/ZvWsST8OR4oZojUHO5EplILaCA5GewmF+/N1/Z+mv0nBu75+d4e6pBow8Rny8SK9r1jlTQxfAEA15fzAA6K6CQ8B9WUDggegAAAFAEAJ0BKhgABQA+7WKqTimlpCIwCAEwHYlsAJ0vAWoB5Uv7AfBuBOZLfcgA/IRQ2x5PjNDgUc8/j157Xg7n9sI83Gxef8MlXddDf4D/w4xcH5SF4nuMSYCxxH6/X/5D/5+OK6fgt/hT1vz/Bb/Cnrdp8nB4LMXjAAAA",
+    "sourceBytes": 70701,
+    "outputBytes": 118998
+  },
+  "parallax": {
+    "fingerprint": "f35f3053f07dacaa",
+    "base": "/images/parallax-f35f3053",
+    "width": 1600,
+    "height": 1000,
+    "widths": [
+      320,
+      640,
+      960,
+      1600
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAADQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JbACdMoR4PzRh/gPPr3EyhVUJ1thgAAD+tf3hpekEDT1Abf/hbUELR52GHYtsbEVTUjGlQUonmdaoBxV1JD2UFZ22XLkGYg/dhu9HKM+esPcOsibvx3Ek6oI9v5fh8OOJncDLY1cnfKu/L9sw4e/wugf+OqnMoFxaOOHozjBb/D5mURtZsC6s18QIrcnmdZrmJZu98HNA+JMoJ7+1XeJ3I8IMDQzZhKrxi0irsgAAAA==",
+    "sourceBytes": 238318,
+    "outputBytes": 374463
+  },
+  "person": {
+    "fingerprint": "cfb7c10e3b0a6656",
+    "base": "/images/person-cfb7c10e",
+    "width": 128,
+    "height": 128,
+    "widths": [
+      128
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADQBQCdASoYABgAPu1iq1AppSOisBgIATAdiWoAnTKBr/4B61pMUo89zoBDNTM0z3hUopuHm8GQAP7vw7fE85uLtiA6ltgXeYsBPIzdY9y5m4pcu6e4GCSJkJsRxqIjKiPwauCH4eYkL6ZV5wDkQo8rodH1gyKl1EFUobJJwZzoCwBKtm8hHSaeCRlnu/XMZm5liqKqxiZL6p1VUd9xlEHg7q38JWeu/gA=",
+    "sourceBytes": 5208,
+    "outputBytes": 2463
+  }
+}

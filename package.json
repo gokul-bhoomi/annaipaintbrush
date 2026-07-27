@@ -1,44 +1,40 @@
 {
-  "name": "annai-website",
-  "version": "0.1.0",
+  "name": "annai-paint-brush",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "coffee-script": "^1.12.7",
-    "emailjs-com": "^2.4.1",
-    "gsap": "^3.3.1",
-    "materialize-css": "^1.0.0",
-    "react": "^16.13.1",
-    "react-color": "^2.18.1",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-dom": "^16.13.1",
-    "react-responsive-carousel": "^3.2.7",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-slideshow-image": "^1.5.3",
-    "react-use": "^15.2.2"
-  },
+  "description": "Annai Paint Brush - manufacturers and wholesalers of paint brushes, rollers and paint tools in Coimbatore",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predev": "node scripts/optimize-images.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/optimize-images.mjs",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "images": "node scripts/optimize-images.mjs",
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "deploy:preview": "npm run build && firebase hosting:channel:deploy preview"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "next": "^16.2.12",
+    "react": "^19.2.8",
+    "react-colorful": "^5.8.0",
+    "react-dom": "^19.2.8"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.8.0",
+    "eslint-config-next": "^16.2.12",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
