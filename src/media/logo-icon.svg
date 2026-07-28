@@ -1,0 +1,18 @@
+<!--
+  Square icon mark: the A on an oxide tile.
+
+  Purpose-drawn for a square, which the old icons were not. Those letterboxed a
+  1960x433 wordmark into a square box, so the artwork occupied a thin strip
+  across the middle and read as a blank tile at 192px on a home screen.
+
+  Path data is duplicated in components/Logo.tsx, which renders the lockup
+  inline. Change one, change both. scripts/optimize-images.mjs rasterises this
+  into public/icon-192.png, icon-512.png, apple-icon.png and favicon.svg.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect x="0" y="0" width="100" height="100" rx="22" fill="#7a2414" />
+  <g transform="translate(50,50) scale(0.88) translate(-50,-50)">
+    <path d="M34 10L48 10L78 90L4 90ZM39 28L20 90L56 90Z" fill-rule="evenodd" fill="#fdfcfb" />
+    <path d="M12.5 67.3C40 58.6 68 51 95 44.3L89 54.7C66 62.4 30 74.6 7.4 80.8ZM93.2 47.4Q84 51 76 55Q86 49.5 92.3 49ZM91.3 50.7Q85 53.5 79 56.5Q86 52 90.3 52.4Z" fill-rule="evenodd" fill="#fdfcfb" />
+  </g>
+</svg>

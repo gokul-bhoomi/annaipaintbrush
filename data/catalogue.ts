@@ -53,28 +53,28 @@ export interface Category {
 export const categories: Category[] = [
   {
     slug: 'paint-brushes',
-    name: 'Paint Brushes',
+    name: 'Paint brushes',
     summary: 'Wall and wood brushes in sizes from half an inch to four inches, including our Premium Milk White and Touch Wood ranges.',
     colorToken: '--color-cat-brush',
     legacyChoice: 1,
   },
   {
     slug: 'art-brushes',
-    name: 'Art Brushes',
+    name: 'Art brushes',
     summary: 'Flat and round artist brushes available in all standard numbers, sold individually or as sets.',
     colorToken: '--color-cat-art',
     legacyChoice: 2,
   },
   {
     slug: 'paint-rollers',
-    name: 'Paint Rollers',
+    name: 'Paint rollers',
     summary: 'Interior, exterior, epoxy and enamel rollers from two to nine inches, plus trays and complete roller sets.',
     colorToken: '--color-cat-roller',
     legacyChoice: 3,
   },
   {
     slug: 'putty-knives',
-    name: 'Putty Knives',
+    name: 'Putty knives',
     summary: 'Putty blades, Altek blades and Patta Uli for surface preparation and finishing work.',
     colorToken: '--color-cat-putty',
     legacyChoice: 4,

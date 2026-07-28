@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import HeroShowcase from '@/components/HeroShowcase';
@@ -29,6 +30,30 @@ import { site, whatsappUrl } from '@/lib/site';
  */
 
 const ENQUIRY = "Hello, I'd like to enquire about Annai Paint Brush products.";
+
+/**
+ * Every other page sets its own canonical; this one was inheriting the root
+ * layout's metadata, which has none, so the homepage shipped without one.
+ *
+ * That is the worst page to miss. The Firebase project answers on both
+ * annaipaintbrush.in and annai-paint-brush.web.app, and the homepage is the
+ * one most likely to be linked and crawled at both addresses. Without a
+ * canonical, search engines pick a winner themselves and can split the ranking
+ * signals between two copies of the same site.
+ *
+ * Title and description are inherited from the root layout on purpose: they
+ * are already written for the homepage.
+ */
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: `${site.name} | Paint Brush Manufacturers in Coimbatore`,
+    description:
+      'Paint brush manufacturers in Coimbatore, with our own factory in Madurai. Wholesale brushes, rollers, art brushes and putty knives, supplied across India.',
+    url: '/',
+    type: 'website',
+  },
+};
 
 export default function HomePage() {
   return (
@@ -146,7 +171,7 @@ export default function HomePage() {
                 on the quality of what leaves it.
               </p>
               <p>
-                Over twenty years that has earned the trust of painters across Tamil Nadu, and we
+                That has earned the trust of painters across Tamil Nadu over twenty years, and we
                 now supply orders throughout India.
               </p>
               <p>

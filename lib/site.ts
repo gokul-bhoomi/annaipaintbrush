@@ -10,8 +10,19 @@
 export const site = {
   name: 'Annai Paint Brush',
   tagline: 'Magic With Colours',
-  /** Update if a custom domain is ever pointed at the Firebase project. */
-  url: 'https://annai-paint-brush.web.app',
+  /**
+   * The canonical origin, and the single value that decides it.
+   *
+   * Feeds `metadataBase` (so the canonical tag on all 28 pages), sitemap.xml,
+   * the robots.txt host, every Open Graph URL, and `url` plus the product
+   * image URLs in the JSON-LD.
+   *
+   * The Firebase project also answers on annai-paint-brush.web.app, and it
+   * always will. Because every page carries a canonical pointing here, that
+   * address defers to this one instead of competing with it for the same
+   * content. No trailing slash: it is used as a `new URL()` base.
+   */
+  url: 'https://annaipaintbrush.in',
 
   /**
    * Start of the copyright range in the footer, NOT the year the business was

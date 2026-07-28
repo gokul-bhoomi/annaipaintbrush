@@ -53,7 +53,7 @@ export default function AboutPage() {
               on them, which is what lets us hold the quality steady from one batch to the next.
             </p>
             <p>
-              Over twenty years that has earned the trust of painters across Tamil Nadu, and we now
+              That has earned the trust of painters across Tamil Nadu over twenty years, and we now
               supply orders throughout India, to hardware shops, dealers and contractors as well as
               to painters buying for themselves.
             </p>

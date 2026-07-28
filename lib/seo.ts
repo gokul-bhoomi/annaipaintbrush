@@ -26,7 +26,7 @@ export function organizationSchema() {
     email: site.email,
     telephone: site.phones.map((p) => p.e164),
     description:
-      'Manufacturers and wholesalers of premium paint brushes, paint rollers, art brushes and putty knives in Coimbatore, supplying across India.',
+      'Manufacturers and wholesalers of paint brushes, paint rollers, art brushes and putty knives, based in Coimbatore with our own factory in Madurai district, supplying across India.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.locality,
@@ -34,6 +34,14 @@ export function organizationSchema() {
       addressRegion: site.address.region,
       addressCountry: site.address.country,
     },
+    /**
+     * Only one `address`, and it is the Coimbatore business address, because
+     * that is the one with a street, a phone and opening hours behind it.
+     * Madurai is stated in the description rather than invented as a second
+     * PostalAddress: publishing a location we cannot fully back is exactly the
+     * kind of thing that gets local markup distrusted.
+     */
+    areaServed: { '@type': 'Country', name: 'India' },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

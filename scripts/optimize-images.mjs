@@ -21,7 +21,7 @@
  */
 
 import { createHash } from 'node:crypto';
-import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 
@@ -52,7 +52,21 @@ const FORMATS = [
  * Bump when the processing pipeline changes, so cached entries are invalidated
  * even though their source files haven't been touched.
  */
-const PIPELINE_VERSION = 3;
+const PIPELINE_VERSION = 4;
+
+/**
+ * Sources kept in the repository but deliberately not published.
+ *
+ * `annai_logo.png` is the original rainbow wordmark, superseded by the vector
+ * lockup in components/Logo.tsx. It is retained as the historical brand asset
+ * but nothing renders it, so there is no reason to ship eight variants of it.
+ *
+ * A build-time colour correction used to live here that deepened its
+ * near-fluorescent inks, which measured 1.21:1 against the page background, up
+ * to the 3:1 legibility floor. That was always labelled a stopgap until artwork
+ * drawn for a light background existed. It now does, so the correction is gone.
+ */
+const UNPUBLISHED = new Set(['annai_logo']);
 
 /**
  * Neutralises the colour cast on the product photographs.
@@ -133,6 +147,7 @@ async function collect() {
     for (const entry of entries) {
       if (!entry.isFile()) continue;
       if (!/\.(jpe?g|png)$/i.test(entry.name)) continue;
+      if (UNPUBLISHED.has(entry.name.replace(/\.[a-z0-9]+$/i, ''))) continue;
       jobs.push({
         /** Manifest key: the original name, so catalogue.ts can look up by sourceImage. */
         key: group.dir === '.' ? entry.name.replace(/\.[a-z0-9]+$/i, '') : `${group.dir}/${entry.name.replace(/\.[a-z0-9]+$/i, '')}`,
@@ -225,21 +240,27 @@ async function process(job, cached) {
 }
 
 /**
- * PWA / Apple touch icons.
+ * Favicon, PWA and Apple touch icons, rasterised from the square logo mark.
  *
- * The logo is 1960x433, so it can't be used as an icon directly, it gets
- * letterboxed onto a square paper-coloured canvas with breathing room, which is
- * also what a maskable icon needs. Replaces the old manifest, which pointed at
- * a 64px favicon and called the app "Create React App Sample".
+ * These used to letterbox the 1960x433 wordmark onto a square canvas, so the
+ * artwork sat in a thin strip across the middle of an otherwise empty tile and
+ * read as blank at 192px on a home screen. src/media/logo-icon.svg is drawn for
+ * a square instead, so the mark fills it.
  */
 async function buildIcons() {
-  const logo = path.join(SRC, 'annai_logo.png');
   const outDir = path.join(ROOT, 'public');
+  const source = path.join(SRC, 'logo-icon.svg');
   const sizes = [192, 512];
 
-  // Gate on the artefacts existing, not on whether photos were re-encoded -
-  // otherwise a fully cached run silently skips icon generation.
-  const expected = [...sizes.map((s) => `icon-${s}.png`), 'apple-icon.png'];
+  /**
+   * Gate on the artefacts existing, not on whether photos were re-encoded -
+   * otherwise a fully cached run silently skips icon generation. The stamp
+   * carries PIPELINE_VERSION too, because the icons depend on the source
+   * artwork and not on whether any photo changed.
+   */
+  const stampPath = path.join(outDir, '.icons-version');
+  const stamp = `v${PIPELINE_VERSION}`;
+  const expected = [...sizes.map((s) => `icon-${s}.png`), 'apple-icon.png', 'favicon.svg'];
   const present = await Promise.all(
     expected.map((name) =>
       stat(path.join(outDir, name)).then(
@@ -248,37 +269,38 @@ async function buildIcons() {
       )
     )
   );
-  if (present.every(Boolean)) return;
+  const current = await readFile(stampPath, 'utf8').catch(() => null);
+  if (present.every(Boolean) && current === stamp) return;
 
+  // Full bleed: the tile is the icon, so there is no letterboxing to do.
   for (const size of sizes) {
-    // ~72% of the canvas, leaving a safe margin for maskable cropping.
-    const inner = Math.round(size * 0.72);
-    const scaled = await sharp(logo).resize({ width: inner, fit: 'inside' }).toBuffer();
-
-    await sharp({
-      create: {
-        width: size,
-        height: size,
-        channels: 4,
-        background: '#fdfcfb',
-      },
-    })
-      .composite([{ input: scaled, gravity: 'center' }])
+    await sharp(source, { density: 384 })
+      .resize(size, size)
       .png()
       .toFile(path.join(outDir, `icon-${size}.png`));
   }
 
-  // Apple touch icon must be opaque and is conventionally 180px.
-  const inner = Math.round(180 * 0.76);
-  const scaled = await sharp(logo).resize({ width: inner, fit: 'inside' }).toBuffer();
-  await sharp({
-    create: { width: 180, height: 180, channels: 4, background: '#fdfcfb' },
-  })
-    .composite([{ input: scaled, gravity: 'center' }])
+  /**
+   * Apple touch icons are conventionally 180px and must be opaque: iOS applies
+   * its own corner radius, and a transparent corner renders black. Flattening
+   * onto the tile colour fills the rounded corners so the mask has square,
+   * opaque artwork to cut from.
+   */
+  await sharp(source, { density: 384 })
+    .resize(180, 180)
+    .flatten({ background: '#7a2414' })
     .png()
     .toFile(path.join(outDir, 'apple-icon.png'));
 
-  console.log(`icons: ${sizes.length + 1} written to public/`);
+  /**
+   * An SVG favicon stays sharp at every tab size and on every display, which a
+   * fixed 16px bitmap cannot. app/layout.tsx lists the PNG after it for the
+   * browsers that do not take SVG.
+   */
+  await copyFile(source, path.join(outDir, 'favicon.svg'));
+
+  await writeFile(stampPath, stamp);
+  console.log(`icons: ${expected.length} written to public/`);
 }
 
 async function main() {

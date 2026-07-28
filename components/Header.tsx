@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
-import ResponsiveImage from '@/components/ResponsiveImage';
+import Logo from '@/components/Logo';
 import { categories } from '@/data/catalogue';
 import { copy } from '@/lib/copy';
 import { site } from '@/lib/site';
@@ -76,14 +76,20 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line/60 bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
         <Link href="/" className="shrink-0" aria-label={`${site.name} home`}>
-          <ResponsiveImage
-            src="annai_logo"
-            alt="Annai Paint Brush"
-            sizes="200px"
-            className="h-7 w-auto sm:h-8"
-            priority
-            placeholder={false}
-          />
+          {/*
+            The lockup scales to its height and the viewBox fixes the width, so
+            the inline variant is 9.24x as wide as it is tall: 443px at 48px.
+            The breakpoint is `lg`, not `sm`, because of what is left over
+            after the nav:
+
+              768px  (md, nav appears)  304px free  ->  inline fits at only 33px
+              1024px (lg)               560px free  ->  inline fits at 60px
+
+            So md is the tight one, not mobile. Below lg the descriptor is
+            dropped rather than shrunk to something unreadable.
+          */}
+          <Logo variant="compact" className="h-10 lg:hidden" />
+          <Logo variant="inline" className="hidden h-12 lg:block" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Main">

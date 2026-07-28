@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Sora } from 'next/font/google';
+import { Archivo, Inter, Sora } from 'next/font/google';
 import './globals.css';
 
 import Footer from '@/components/Footer';
@@ -27,21 +27,54 @@ const inter = Inter({
   variable: '--font-sans-loaded',
 });
 
+/**
+ * The logo typeface, and the only thing it is used for.
+ *
+ * Two weights, latin only, so it stays small. `display: 'block'` rather than
+ * 'swap' on purpose: the wordmark is live SVG text, so a fallback face would
+ * render at the wrong widths and visibly reflow the logo when Archivo arrives.
+ * A brief blank is the right trade for a mark. next/font self-hosts and
+ * preloads it, and the header is in the root layout, so the blank is short.
+ */
+const archivo = Archivo({
+  subsets: ['latin'],
+  display: 'block',
+  variable: '--font-logo-loaded',
+  weight: ['600', '700'],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `${site.name} | Paint Brush Manufacturers in Coimbatore`,
     template: `%s | ${site.name}`,
   },
+  /**
+   * Names both places on purpose. Coimbatore is the business address and the
+   * term local search is fought over, Madurai is where the factory is and where
+   * "paint brush manufacturer in Madurai" queries land. Kept under 160
+   * characters so Google does not truncate it in the result.
+   */
   description:
-    'Manufacturers and wholesalers of premium paint brushes, paint rollers, art brushes and putty knives in Coimbatore. Over 20 years of manufacturing, supplying across India.',
+    'Paint brush manufacturers in Coimbatore, with our own factory in Madurai. Wholesale brushes, rollers, art brushes and putty knives, supplied across India.',
   applicationName: site.name,
-  icons: { icon: '/favicon.ico', apple: '/apple-icon.png' },
+  /**
+   * SVG first so the tab icon stays sharp on any display, with the 192px PNG
+   * behind it for browsers that do not take SVG favicons. Both are generated
+   * from src/media/logo-icon.svg by the image pipeline.
+   */
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${sora.variable} ${inter.variable} ${archivo.variable}`}>
       {/*
         `relative` anchors the page painter's overlay, which is absolutely
         positioned to the height of the whole document so paint sticks to the

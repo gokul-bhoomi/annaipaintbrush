@@ -23,6 +23,8 @@ next-env.d.ts
 /public/images/
 /public/icon-*.png
 /public/apple-icon.png
+/public/.icons-version
+/public/favicon.svg
 
 # data/image-manifest.json is deliberately NOT ignored: it's imported at build
 # time by components/ResponsiveImage.tsx, so `tsc --noEmit` and editor
