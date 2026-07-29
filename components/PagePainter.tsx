@@ -51,14 +51,19 @@ export default function PagePainter() {
   /**
    * Matches the canvases to the full document, preserving anything painted.
    *
-   * Width comes from `window.innerWidth` rather than
-   * `document.documentElement.clientWidth`, which measured 0 in testing and
-   * collapsed the whole overlay to zero width. Both values are guarded anyway,
-   * so a bad measurement leaves the previous size in place instead of wiping
-   * the canvas.
+   * Width prefers `document.documentElement.clientWidth` because it excludes
+   * the vertical scrollbar. `window.innerWidth` includes it, which made the
+   * overlay 15px wider than the content on any desktop with classic
+   * scrollbars and put a horizontal scrollbar on every page.
+   *
+   * It falls back to `innerWidth` because clientWidth has been observed
+   * reading 0 here, which would collapse the overlay entirely. Every value is
+   * guarded below, so a bad measurement leaves the previous size in place
+   * rather than wiping what has been painted.
    */
   const resize = useCallback(() => {
-    const width = window.innerWidth || document.body.clientWidth;
+    const width =
+      document.documentElement.clientWidth || window.innerWidth || document.body.clientWidth;
     const height = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight,
@@ -198,8 +203,12 @@ export default function PagePainter() {
       </div>
 
       {/* Toolbar. Sits opposite the WhatsApp and call buttons so the two
-          floating controls never collide. */}
-      <div className="fixed bottom-4 left-4 z-50 sm:bottom-6 sm:left-6">
+          floating controls never collide.
+
+          z-40 matches StickyContact and deliberately sits below the header's
+          z-50, so the mobile menu covers both floating controls instead of
+          having them punch through the open drawer. */}
+      <div className="fixed bottom-4 left-4 z-40 sm:bottom-6 sm:left-6">
         {!open ? (
           <button
             type="button"

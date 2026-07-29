@@ -9,7 +9,6 @@
  */
 export const site = {
   name: 'Annai Paint Brush',
-  tagline: 'Magic With Colours',
   /**
    * The canonical origin, and the single value that decides it.
    *

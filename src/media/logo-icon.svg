@@ -1,18 +1,43 @@
-<!--
-  Square icon mark: the A on an oxide tile.
-
-  Purpose-drawn for a square, which the old icons were not. Those letterboxed a
-  1960x433 wordmark into a square box, so the artwork occupied a thin strip
-  across the middle and read as a blank tile at 192px on a home screen.
-
-  Path data is duplicated in components/Logo.tsx, which renders the lockup
-  inline. Change one, change both. scripts/optimize-images.mjs rasterises this
-  into public/icon-192.png, icon-512.png, apple-icon.png and favicon.svg.
--->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <rect x="0" y="0" width="100" height="100" rx="22" fill="#7a2414" />
-  <g transform="translate(50,50) scale(0.88) translate(-50,-50)">
-    <path d="M34 10L48 10L78 90L4 90ZM39 28L20 90L56 90Z" fill-rule="evenodd" fill="#fdfcfb" />
-    <path d="M12.5 67.3C40 58.6 68 51 95 44.3L89 54.7C66 62.4 30 74.6 7.4 80.8ZM93.2 47.4Q84 51 76 55Q86 49.5 92.3 49ZM91.3 50.7Q85 53.5 79 56.5Q86 52 90.3 52.4Z" fill-rule="evenodd" fill="#fdfcfb" />
+  <!--
+    App icon and favicon: the wordmark's A on the brand tile.
+
+    KEEP THIS COMMENT INSIDE THE <svg> ELEMENT, NOT ABOVE IT.
+    sharp detects SVG by sniffing roughly the first kilobyte of the file for
+    the opening tag. A comment long enough to push <svg> past that window makes
+    it report "Input file contains unsupported image format", even though the
+    XML is perfectly valid and every other parser accepts it.
+
+    THE OUTLINE IS ARCHIVO'S REAL "A", NOT A DRAWING OF ONE.
+    scripts/optimize-images.mjs rasterises this file with sharp, which renders
+    SVG through librsvg and so has no access to the webfont the site loads. A
+    <text> element here would silently fall back to whatever the build machine
+    happens to have installed, and the icon would stop matching the header. So
+    the glyph is embedded as path data, extracted once from the Archivo file
+    next/font self-hosts (upem 1000, advance 709, cap height 686) and scaled to
+    this 100x100 tile.
+
+    It is the weight-600 instance. Archivo ships as a variable font whose wght
+    axis defaults to 600, while the wordmark renders its A at 700, so this
+    glyph is a hair lighter than the header. That is a fraction of a pixel of
+    stem width at any size an icon is actually seen at, and instancing the axis
+    offline was not worth adding a build dependency for.
+
+    To regenerate: decompress the woff2 that next/font emits, read the 'A'
+    glyph, and take getPath(0, 0, 100). The transform below centres the result,
+    putting the baseline at y=81 and scaling the 68.6-unit cap height to 62
+    units so the letter fills 62% of the tile height.
+
+    Tile colour is the brand-800 token, the same one the wordmark uses. Do not
+    write that token's CSS custom-property spelling in this comment: a double
+    hyphen is illegal inside an XML comment and librsvg rejects the whole file.
+  -->
+  <rect x="0" y="0" width="100" height="100" rx="22" fill="#822b18" />
+  <g transform="translate(17.95,81) scale(0.9038)">
+    <path
+      fill="#fdfcfb"
+      fill-rule="evenodd"
+      d="M13.900 0L0.500 0L27.200-68.600L43.600-68.600L70.400 0L56.300 0L50.800-14.600L19.400-14.600L13.900 0M30.400-44.200L23.500-25.600L46.600-25.600L39.700-44.200Q39.300-45.200 38.750-46.750Q38.200-48.300 37.600-50.150Q37-52 36.400-53.900Q35.800-55.800 35.300-57.300L34.800-57.300Q34.200-55.300 33.350-52.700Q32.500-50.100 31.700-47.800Q30.900-45.500 30.400-44.200"
+    />
   </g>
 </svg>

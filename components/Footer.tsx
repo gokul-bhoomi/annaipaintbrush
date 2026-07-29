@@ -18,16 +18,8 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            {/*
-              Full lockup here, and 76px specifically.
-              The descriptor is 10 units inside a 69-unit viewBox, so it scales
-              with the lockup: at 48px it renders at 7px and at 40px at 5.8px,
-              both unreadable. 76px puts it at 11px. This is the smallest the
-              full lockup can be and still earn its second line, which is also
-              why the header uses the compact variant instead.
-            */}
-            <Logo variant="full" className="h-[76px]" />
-            <p className="mt-4 text-sm text-brand-700">{site.tagline}</p>
+            {/* Room to breathe here, so the second line lands at ~12.6px. */}
+            <Logo className="h-20" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-500">
               Manufacturers of paint brushes, rollers and painting tools in {site.address.city},
               supplying across India.

@@ -65,8 +65,16 @@ const PIPELINE_VERSION = 4;
  * near-fluorescent inks, which measured 1.21:1 against the page background, up
  * to the 3:1 legibility floor. That was always labelled a stopgap until artwork
  * drawn for a light background existed. It now does, so the correction is gone.
+ *
+ * `logo-lockup.png` is the current logo artwork and IS rendered, but this
+ * pipeline is the wrong tool for it. The lockup is two colours, brand oxide and
+ * transparent, which a palette PNG stores in 11.4KB at 520px wide. The same
+ * image through this pipeline's lossy encoders costs 59KB as WebP, because they
+ * spend their bits on the anti-aliased edges a palette encodes almost for free.
+ * The two published sizes are built from this master by hand instead; see the
+ * note in components/Logo.tsx.
  */
-const UNPUBLISHED = new Set(['annai_logo']);
+const UNPUBLISHED = new Set(['annai_logo', 'logo-lockup']);
 
 /**
  * Neutralises the colour cast on the product photographs.
@@ -288,7 +296,7 @@ async function buildIcons() {
    */
   await sharp(source, { density: 384 })
     .resize(180, 180)
-    .flatten({ background: '#7a2414' })
+    .flatten({ background: '#822b18' })
     .png()
     .toFile(path.join(outDir, 'apple-icon.png'));
 

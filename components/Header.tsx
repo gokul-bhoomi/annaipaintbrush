@@ -73,23 +73,41 @@ export default function Header() {
   const isActive = (href: string) => pathname.startsWith(href.replace(/\/$/, '')) && href !== '/';
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/60 bg-paper/90 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
+    <header className="sticky top-0 z-50">
+      {/*
+        The blurred bar is its own layer, and <header> carries no filter.
+
+        `backdrop-filter` makes an element a containing block for its
+        `position: fixed` descendants. With the blur on <header>, the drawer
+        below resolved its `fixed inset-0` against the 80px header box instead
+        of the viewport, so on a phone the menu opened as a strip clipped to
+        the header with the page still showing underneath. Keep <header> free
+        of filter, transform, perspective, contain and will-change for the
+        same reason.
+      */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 border-b border-line/60 bg-paper/90 backdrop-blur-md"
+      />
+      <div className="relative mx-auto flex h-20 max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
         <Link href="/" className="shrink-0" aria-label={`${site.name} home`}>
           {/*
-            The lockup scales to its height and the viewBox fixes the width, so
-            the inline variant is 9.24x as wide as it is tall: 443px at 48px.
-            The breakpoint is `lg`, not `sm`, because of what is left over
-            after the nav:
-
-              768px  (md, nav appears)  304px free  ->  inline fits at only 33px
-              1024px (lg)               560px free  ->  inline fits at 60px
-
-            So md is the tight one, not mobile. Below lg the descriptor is
-            dropped rather than shrunk to something unreadable.
+            One lockup at every width, sized by font-size rather than height.
+            The old SVG needed a separate cut-down variant below `lg` because
+            its two lines were locked to one viewBox, so "Paint Brush" fell to
+            an unreadable 6px on a phone and had to be dropped. As text the two
+            parts size independently, so the full name survives down to 360px.
           */}
-          <Logo variant="compact" className="h-10 lg:hidden" />
-          <Logo variant="inline" className="hidden h-12 lg:block" />
+          {/*
+            Heights, not font-sizes: the lockup is artwork at 3.74:1, so 48px
+            tall is 180px wide and 56px is 209px. Both clear the hamburger at
+            360px and the nav at 768px, where the gap is tightest.
+
+            The floor is set by the second line. "Brushes & Rollers" is 95 of
+            the artwork's 602 units, so it renders at 7.6px at h-12 and 8.8px
+            at h-14. Going below h-12 is what makes it unreadable.
+          */}
+          <Logo className="h-12 sm:h-14" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Main">

@@ -3,10 +3,13 @@
 /*
  * Annai Paint Brush: design tokens
  *
- * The logo is a rainbow (green/cyan swoosh, multicolour wordmark), so the page
- * chrome stays deliberately neutral and lets the logo and the product
- * photography carry the colour. One warm accent, drawn from the vermilion of
- * the old `deep-orange` nav so returning customers still recognise the brand.
+ * The page chrome stays deliberately neutral and lets the product photography
+ * carry the colour. One warm accent, drawn from the vermilion of the old
+ * `deep-orange` nav so returning customers still recognise the brand.
+ *
+ * This originally read "the logo is a rainbow, so the chrome stays neutral".
+ * The logo is now a plain wordmark in brand-800, so the neutrality is no
+ * longer compensating for anything: it is the design.
  *
  * Contrast, measured against --color-paper (all AA figures for normal text):
  *   brand-500  3.70:1  → fills, large display text (>=24px), never body copy
@@ -50,9 +53,12 @@
   --color-line: #e2d9d2;
 
   /*
-   * Category identifiers, sampled from the logo swoosh and darkened to reach
-   * AA. Used only for small chips and accents, never as section backgrounds,
-   * which is what made the old site feel like a colour swatch test.
+   * Category identifiers, originally sampled from the old rainbow logo's
+   * swoosh and darkened to reach AA. That logo is gone, so these are now just
+   * four distinguishable hues with no source to stay faithful to; they are
+   * kept because the category colours are already familiar to returning
+   * visitors. Used only for small chips and accents, never as section
+   * backgrounds, which is what made the old site feel like a swatch test.
    */
   --color-cat-brush: #a33218;
   --color-cat-art: #8020a0;
@@ -63,9 +69,12 @@
   --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   /*
-   * Logo lockup only, see components/Logo.tsx. Never use it for page copy.
-   * The lockup's viewBox is measured against Archivo's metrics, so changing
-   * this face will crop or float the wordmark.
+   * Logo wordmark only, see components/Logo.tsx. Never use it for page copy.
+   *
+   * The wordmark is real text now rather than a measured SVG viewBox, so
+   * swapping this face no longer risks cropping anything. It will still change
+   * the width of the header lockup, which is the one thing to re-check.
+   * Archivo is loaded at 600 and 700 only; any other weight is synthesised.
    */
   --font-logo: 'Archivo', ui-sans-serif, system-ui, sans-serif;
 

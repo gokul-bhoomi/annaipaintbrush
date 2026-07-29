@@ -18,7 +18,7 @@ import { site } from '@/lib/site';
 export const dynamic = 'force-static';
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${site.name} | ${site.tagline}`,
+    name: `${site.name} | Paint Brushes & Rollers`,
     short_name: site.name,
     description:
       'Manufacturers and wholesalers of premium paint brushes, paint rollers, art brushes and putty knives in Coimbatore.',

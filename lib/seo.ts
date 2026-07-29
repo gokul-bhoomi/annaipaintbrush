@@ -21,7 +21,6 @@ export function organizationSchema() {
     '@type': 'LocalBusiness',
     '@id': absolute('/#business'),
     name: site.name,
-    slogan: site.tagline,
     url: site.url,
     email: site.email,
     telephone: site.phones.map((p) => p.e164),
