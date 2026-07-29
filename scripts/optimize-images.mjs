@@ -55,6 +55,16 @@ const FORMATS = [
 const PIPELINE_VERSION = 4;
 
 /**
+ * Versions the ICONS independently of the photo pipeline.
+ *
+ * The icons are derived from their own artwork and none of the photo encoding
+ * settings, so folding them into PIPELINE_VERSION meant that changing an icon
+ * invalidated the fingerprints of all 42 photographs and forced a full
+ * re-encode of ~11MB to regenerate four small PNGs. Bump this instead.
+ */
+const ICONS_VERSION = 2;
+
+/**
  * Sources kept in the repository but deliberately not published.
  *
  * `annai_logo.png` is the original rainbow wordmark, superseded by the vector
@@ -255,6 +265,67 @@ async function process(job, cached) {
  * read as blank at 192px on a home screen. src/media/logo-icon.svg is drawn for
  * a square instead, so the mark fills it.
  */
+/** brand-800, the tile colour and the ink the logo artwork is retinted to. */
+const BRAND_OXIDE = '#822b18';
+
+/**
+ * Lifts the brush-and-roller mark out of the logo lockup and recolours it for
+ * a dark tile.
+ *
+ * The mark is the left 722px of the 2249x602 artwork; `trim` then removes the
+ * gutter between it and the wordmark, so the crop stays correct if the
+ * artwork is ever re-exported slightly differently. The mark is drawn in brand
+ * oxide, which would be invisible on an oxide tile, so every pixel's RGB is
+ * replaced with paper while its alpha is preserved. Recolouring this way keeps
+ * the anti-aliased edges intact, which a threshold or a `tint` would not.
+ */
+async function brushRollerMark() {
+  const lockup = path.join(SRC, 'logo-lockup.png');
+  const { height } = await sharp(lockup).metadata();
+  const cropped = await sharp(lockup)
+    .extract({ left: 0, top: 0, width: 722, height })
+    .trim({ threshold: 5 })
+    .toBuffer();
+
+  const { data, info } = await sharp(cropped).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const recoloured = Buffer.alloc(data.length);
+  for (let p = 0; p < data.length; p += 4) {
+    recoloured[p] = 0xfd;
+    recoloured[p + 1] = 0xfc;
+    recoloured[p + 2] = 0xfb;
+    recoloured[p + 3] = data[p + 3];
+  }
+  return sharp(recoloured, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .png()
+    .toBuffer();
+}
+
+/**
+ * Centres the mark on a rounded brand tile at `size`.
+ *
+ * The 17% inset is what makes these safe as Android maskable icons: it leaves
+ * the artwork inside the central 66% of the tile, comfortably within the 80%
+ * safe zone Android guarantees it will not crop, whatever mask shape the
+ * launcher applies.
+ */
+async function markTile(mark, size) {
+  const inset = Math.round(size * 0.17);
+  const tile = Buffer.from(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">` +
+      `<rect width="${size}" height="${size}" rx="${size * 0.22}" fill="${BRAND_OXIDE}"/></svg>`
+  );
+  // composite() takes a Buffer, not a Sharp instance, so the scale is resolved first.
+  const scaled = await sharp(mark)
+    .resize({
+      width: size - inset * 2,
+      height: size - inset * 2,
+      fit: 'contain',
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
+    .toBuffer();
+  return sharp(tile).composite([{ input: scaled, gravity: 'centre' }]);
+}
+
 async function buildIcons() {
   const outDir = path.join(ROOT, 'public');
   const source = path.join(SRC, 'logo-icon.svg');
@@ -263,11 +334,11 @@ async function buildIcons() {
   /**
    * Gate on the artefacts existing, not on whether photos were re-encoded -
    * otherwise a fully cached run silently skips icon generation. The stamp
-   * carries PIPELINE_VERSION too, because the icons depend on the source
-   * artwork and not on whether any photo changed.
+   * carries ICONS_VERSION, so changing the icon artwork regenerates the icons
+   * without touching the photograph cache.
    */
   const stampPath = path.join(outDir, '.icons-version');
-  const stamp = `v${PIPELINE_VERSION}`;
+  const stamp = `icons-v${ICONS_VERSION}`;
   const expected = [...sizes.map((s) => `icon-${s}.png`), 'apple-icon.png', 'favicon.svg'];
   const present = await Promise.all(
     expected.map((name) =>
@@ -280,12 +351,11 @@ async function buildIcons() {
   const current = await readFile(stampPath, 'utf8').catch(() => null);
   if (present.every(Boolean) && current === stamp) return;
 
+  const mark = await brushRollerMark();
+
   // Full bleed: the tile is the icon, so there is no letterboxing to do.
   for (const size of sizes) {
-    await sharp(source, { density: 384 })
-      .resize(size, size)
-      .png()
-      .toFile(path.join(outDir, `icon-${size}.png`));
+    await (await markTile(mark, size)).png().toFile(path.join(outDir, `icon-${size}.png`));
   }
 
   /**
@@ -294,16 +364,24 @@ async function buildIcons() {
    * onto the tile colour fills the rounded corners so the mask has square,
    * opaque artwork to cut from.
    */
-  await sharp(source, { density: 384 })
-    .resize(180, 180)
-    .flatten({ background: '#822b18' })
+  await (await markTile(mark, 180))
+    .flatten({ background: BRAND_OXIDE })
     .png()
     .toFile(path.join(outDir, 'apple-icon.png'));
 
   /**
-   * An SVG favicon stays sharp at every tab size and on every display, which a
-   * fixed 16px bitmap cannot. app/layout.tsx lists the PNG after it for the
-   * browsers that do not take SVG.
+   * The tab icon stays the letter A, and this is deliberate.
+   *
+   * Rendered at real sizes and inspected pixel by pixel, the brush-and-roller
+   * mark is unreadable at 16px: the bristle hatching, the roller frame and the
+   * handle taper collapse into a single rust-coloured blob. It resolves at
+   * 32px and looks genuinely good at 48px and above, which is why the home
+   * screen icons use it. A tab is the one place that is routinely 16px, on any
+   * standard-DPI monitor.
+   *
+   * So the mark goes where it has room and the letter goes where it does not.
+   * The two are never seen side by side. Serving this as SVG also keeps it
+   * sharp at every tab size, which no fixed bitmap can manage.
    */
   await copyFile(source, path.join(outDir, 'favicon.svg'));
 
